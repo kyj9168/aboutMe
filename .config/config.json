@@ -1,8 +1,0 @@
-{
-  "runmode": "local",
-  "local": {
-    "DEBUG_LEVEL": "debug",
-    "ELASTICSEARCH_HOST": [{"IP":"127.0.0.1","PORT":"6500"}],
-    "EXPRESS_PORT":6102
-  }
-}
