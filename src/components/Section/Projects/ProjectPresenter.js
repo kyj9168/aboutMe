@@ -140,18 +140,28 @@ export default ({ data }) => (
                             <CardTitle>{e.id}</CardTitle>
                             <ContentTxt>{e.txt}</ContentTxt>
                             {e.url && (
-                                <ContentURL href={e.url} name="'URL: '">
+                                <ContentURL
+                                    target="_blank"
+                                    href={e.url}
+                                    name="'URL: '"
+                                >
                                     {e.url}
                                 </ContentURL>
                             )}
                             {e.pdf && (
-                                <ContentURL href={e.pdf} name="'PDF: '">
+                                <ContentURL
+                                    target="_blank"
+                                    href={e.pdf}
+                                    name="'PDF: '"
+                                >
                                     커뮤니티.pdf
                                 </ContentURL>
                             )}
 
                             {e.git && (
-                                <ContentUrl href={e.git}>깃허브</ContentUrl>
+                                <ContentUrl target="_blank" href={e.git}>
+                                    깃허브
+                                </ContentUrl>
                             )}
                         </CardContent>
                     </Card>
