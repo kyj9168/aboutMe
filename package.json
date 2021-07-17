@@ -7,9 +7,6 @@
     "@fortawesome/free-brands-svg-icons": "^5.7.2",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "app-root-path": "^3.0.0",
-    "axios": "^0.21.1",
-    "express-basic-auth": "^1.2.0",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.14.1",
     "react": "^16.8.4",
@@ -23,11 +20,12 @@
     "swiper": "^6.7.5"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm run client\" \"npm run server\"",
-    "client": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "server": "nodemon ./server/index.js",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build"
   },
   "eslintConfig": {
     "extends": "react-app"

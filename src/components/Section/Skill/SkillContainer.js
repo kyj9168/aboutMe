@@ -18,10 +18,12 @@ import LINUXIMG from "assets/skill/linux.png";
 import JSPIMG from "assets/skill/jsp.png";
 import bitbucketIMG from "assets/skill/bitbucket.jpg";
 import ELKIMG from "assets/skill/elk.png";
+import NIFIIMG from "assets/skill/nifi.png";
 
 class SkillContainer extends Component {
     state = {
-        data: [{
+        data: [
+            {
                 skill: "HTML5",
                 img: HTMLIMG,
                 lv: 4,
@@ -31,91 +33,97 @@ class SkillContainer extends Component {
                 skill: "CSS3",
                 img: CSSIMG,
                 lv: 3,
-                txt: "프론트엔드의 기본2, 웹페이지의 스타일링과 반응형 레이아웃을 학습하였습니다.",
+                txt: "웹페이지의 스타일링과 반응형 레이아웃을 학습하였습니다.",
             },
             {
                 skill: "JavaScript",
                 img: JSIMG,
                 lv: 5,
-                txt: "프론트엔드의 기본3, 클로저와 this 등의 JavaScript의 특성과 ES6를 학습하였습니다.",
+                txt: "가장 좋아하는 언어입니다. ES6문법을 사용 할 수 있습니다.",
             },
             {
                 skill: "Jquery",
                 img: JQIMG,
                 lv: 4,
-                txt: "선택자와 ajax, 트래버싱 등을 학습하였습니다.",
+                txt: "현재는 Jquery를 현업에서 사용하지 않지만 간단한 문법이라 자바스크립트로 개발한 코드를 Jquery로 전환하는걸 어려워하지 않습니다",
             },
             {
                 skill: "React.js",
                 img: REACTIMG,
                 lv: 2,
-                txt: "Virtual DOM, State와 Props, 라이프사이클, Router 등을 학습하여 웹페이지를 구현할 수 있습니다.",
+                txt: "node.js를 하며 프론트쪽으로 가장 많이 진행한 라이브러리이며 현재도 이 라이브러리를 더 잘 사용하기 위해 공부중에 있습니다.",
             },
             {
                 skill: "Node.js",
                 img: NODEIMG,
                 lv: 2,
-                txt: "Node.js를 통한 백엔드 구성 방법과, 프레임워크인 Express를 학습하여 간단한 API서버를 만들 수 있습니다.",
+                txt: "개발자로 취업후 약 1년반동안 모든 프로젝트를 node.js로 해왔습니다.",
             },
             {
                 skill: "KAFKA",
                 img: KAFKAMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "Nifi에 kafka를 연동하여 많은 처리량을 부하없이 처리하도록 사용하였습니다.",
+            },
+            {
+                skill: "NIFI",
+                img: NIFIIMG,
+                lv: 1,
+                txt: "RDB와 ElasticSearch를 연동하기 위해 CDC를 사용하여 DB를 연동하고 수집하며 데이터를 다룰수 있습니다.",
             },
             {
                 skill: "JSP",
                 img: JSPIMG,
                 lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                txt: "spring을 공부할때 가장 많이 사용한 프론트단 언어입니다.",
             },
             {
                 skill: "JPA",
                 img: JPAIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "공부중에 있으며 SpringBoot를 공부할때 CRUD를 JPA로 개발하여 Rest API를 개발해본 경험이 있습니다.",
             },
             {
                 skill: "LINUX",
                 img: LINUXIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 2,
+                txt: "프로세스를 설치 배포 모두 가능하고 bash 파일 작성, 환경변수, 계정설정 모두 가능합니다.",
             },
             {
                 skill: "REDIS",
                 img: REDISIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "session관리를 위해 사용해보았습니다.",
             },
             {
                 skill: "MY-SQL",
                 img: MYSQLIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "CRUD와 테이블 생성까지 구성하여 쿼리문을 작성 할 수 있습니다.",
             },
             {
                 skill: "ELK STACK",
                 img: ELKIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 3,
+                txt: "형태소 분석기를 이용한 프로젝트 경험이 많아 엘라스틱을 잘다룰수 있습니다.",
             },
             {
                 skill: "Spring Boot",
                 img: SPBTIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "회사 업무외로 공부하여 Rest API를 개발한적이 있습니다.",
             },
             {
                 skill: "AWS",
                 img: AWSIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 1,
+                txt: "ec2, rds 설치가 가능합니다. 직접 서버를 만들고 운영까지 경험해 보았습니다",
             },
             {
                 skill: "JAVA",
                 img: JAVAIMG,
-                lv: 4,
-                txt: "프론트엔드의 기본, 웹표준과 HTML태그에 대해 학습하였습니다.",
+                lv: 2,
+                txt: "교육원에서 배웠던 언어로 절대 놓치고 싶지 않은 언어 입니다.",
             },
             {
                 skill: "bitbucket",
@@ -135,33 +143,34 @@ class SkillContainer extends Component {
 
     increaseCounter = () => {
         const { slideCounter, data } = this.state;
-        slideCounter === data.length - 1 ?
-            this.setState({
-                slideCounter: 0,
-            }) :
-            this.setState({
-                slideCounter: slideCounter + 1,
-            });
+        slideCounter === data.length - 1
+            ? this.setState({
+                  slideCounter: 0,
+              })
+            : this.setState({
+                  slideCounter: slideCounter + 1,
+              });
     };
 
     decreaseCounter = () => {
         const { slideCounter, data } = this.state;
-        slideCounter === 0 ?
-            this.setState({
-                slideCounter: data.length - 1,
-            }) :
-            this.setState({
-                slideCounter: slideCounter - 1,
-            });
+        slideCounter === 0
+            ? this.setState({
+                  slideCounter: data.length - 1,
+              })
+            : this.setState({
+                  slideCounter: slideCounter - 1,
+              });
     };
 
     render() {
         const { data, slideCounter } = this.state;
-        return ( <
-            SkillPresenter data = { data }
-            slideCounter = { slideCounter }
-            increaseCounter = { this.increaseCounter }
-            decreaseCounter = { this.decreaseCounter }
+        return (
+            <SkillPresenter
+                data={data}
+                slideCounter={slideCounter}
+                increaseCounter={this.increaseCounter}
+                decreaseCounter={this.decreaseCounter}
             />
         );
     }
