@@ -56,7 +56,7 @@ class SkillContainer extends Component {
             {
                 skill: "Node.js",
                 img: NODEIMG,
-                lv: 2,
+                lv: 5,
                 txt: "개발자로 취업후 약 1년반동안 모든 프로젝트를 node.js로 해왔습니다.",
             },
             {
@@ -68,13 +68,13 @@ class SkillContainer extends Component {
             {
                 skill: "NIFI",
                 img: NIFIIMG,
-                lv: 1,
+                lv: 2,
                 txt: "RDB와 ElasticSearch를 연동하기 위해 CDC를 사용하여 DB를 연동하고 수집하며 데이터를 다룰수 있습니다.",
             },
             {
                 skill: "JSP",
                 img: JSPIMG,
-                lv: 4,
+                lv: 2,
                 txt: "spring을 공부할때 가장 많이 사용한 프론트단 언어입니다.",
             },
             {
