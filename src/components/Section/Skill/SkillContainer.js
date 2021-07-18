@@ -45,13 +45,13 @@ class SkillContainer extends Component {
                 skill: "Jquery",
                 img: JQIMG,
                 lv: 4,
-                txt: "현재는 Jquery를 현업에서 사용하지 않지만 간단한 문법이라 자바스크립트로 개발한 코드를 Jquery로 전환하는걸 어려워하지 않습니다",
+                txt: "자바스크립트로 개발한 코드를 Jquery로 전환하는걸 어려워하지 않습니다",
             },
             {
                 skill: "React.js",
                 img: REACTIMG,
                 lv: 2,
-                txt: "node.js를 하며 프론트쪽으로 가장 많이 진행한 라이브러리이며 현재도 이 라이브러리를 더 잘 사용하기 위해 공부중에 있습니다.",
+                txt: "프론트쪽으로 가장 많이 진행한 라이브러리이며 현재도 이 라이브러리를 더 잘 사용하기 위해 공부중에 있습니다.",
             },
             {
                 skill: "Node.js",
