@@ -96,7 +96,7 @@ const SkillCard = styled.li`
         right: -105%;
         width: 100%;
         border: 5px solid #f9a11d;
-        border-radius: 0px 15px 15px 0px;
+        border-radius: 15px 0px 15px 15px;
         background-color: #f9a11d;
         content: "";
         transition: right 0.4s ease-in;
@@ -133,7 +133,7 @@ const SkillCardSwiper = styled.li`
     &:before {
         position: absolute;
         top: 0;
-        left: -102%;
+        left: -105%;
         width: 100%;
         border: 5px solid #f9a11d;
         border-radius: 0px 15px 15px 0px;
@@ -144,10 +144,10 @@ const SkillCardSwiper = styled.li`
     &:after {
         position: absolute;
         bottom: 0;
-        right: -102%;
+        right: -105%;
         width: 100%;
         border: 5px solid #f9a11d;
-        border-radius: 0px 15px 15px 0px;
+        border-radius: 15px 0px 0px 15px;
         background-color: #f9a11d;
         content: "";
         transition: right 0.4s ease-in;
