@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import img from "../../assets/home.png";
-import Typing from "react-typing-animation";
-
+import Typewriter from "typewriter-effect";
+import "./Home.css";
 const blink = keyframes`
   from, to {
     opacity: 1;
@@ -46,29 +46,6 @@ const TitleContainer = styled.div`
         ) repeat scroll 0 0;
     line-height: 1.5;
 `;
-const Title = styled.h2`
-    font-size: 5rem;
-    font-weight: 600;
-    white-space: nowrap;
-    @media (min-width: 540px) and (max-width: 994px) {
-        font-size: 3rem;
-    }
-    @media (max-width: 540px) {
-        font-size: 2.2rem;
-    }
-`;
-const SubTitle = styled.h3`
-    font-size: 4rem;
-    font-weight: 600;
-    color: rgba(20, 20, 20, 0.6);
-    white-space: nowrap;
-    @media (min-width: 540px) and (max-width: 994px) {
-        font-size: 2rem;
-    }
-    @media (max-width: 540px) {
-        font-size: 1.3rem;
-    }
-`;
 const CursorSpan = styled.span`
     font-weight: 100;
     color: black;
@@ -76,11 +53,14 @@ const CursorSpan = styled.span`
     animation: ${blink} 1s step-end infinite;
 `;
 
+
+
+
 export default () => (
     <Container id="Home">
         <Background />
         <TitleContainer>
-            <Typing>
+            {/* <Typing>
                 <Title>안녕하세요!</Title>
                 <SubTitle>능동적인 태도로 항상 발전을 이루는</SubTitle>
                 <SubTitle>
@@ -89,7 +69,22 @@ export default () => (
                     </span>
                     <span> 김영준입니다.</span>
                 </SubTitle>
-            </Typing>
+            </Typing> */}
+            <Typewriter
+                onInit={(typewriter) => {
+                    typewriter
+                        .typeString(
+                            "<span class='Title'>안녕하세요!</span><br>"
+                        )
+                        .typeString(
+                            "<span class='Title'>능동적인 태도로 항상 발전을 이루는</span><br>"
+                        )
+                        .typeString(
+                            "<span class='Title'> <span class='Title Subcolor'> Web Developer</span> 김영준입니다.</span>"
+                        )
+                        .start();
+                }}
+            />
         </TitleContainer>
     </Container>
 );

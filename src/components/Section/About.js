@@ -16,7 +16,7 @@ const Container = styled.article`
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
-    color: rgb(56, 173, 174);
+    color: #000;
     @media (max-width: 994px) {
         text-align: center;
     }
@@ -146,7 +146,10 @@ export default () => (
                             </ItemIcon>
                             <Itemtxt>
                                 <ItemTitle>Phone : </ItemTitle>
-                                <ItemLink href="tel:010-9001-6800">
+                                <ItemLink
+                                    target="_blank"
+                                    href="tel:010-9001-6800"
+                                >
                                     010-9001-6800
                                 </ItemLink>
                             </Itemtxt>
@@ -157,7 +160,10 @@ export default () => (
                             </ItemIcon>
                             <Itemtxt>
                                 <ItemTitle>E-Mail : </ItemTitle>
-                                <ItemLink href="mailto:kyj9168@naver.com">
+                                <ItemLink
+                                    target="_blank"
+                                    href="mailto:kyj9168@naver.com"
+                                >
                                     kyj9168@naver.com
                                 </ItemLink>
                             </Itemtxt>
@@ -168,7 +174,10 @@ export default () => (
                             </ItemIcon>
                             <Itemtxt>
                                 <ItemTitle>Github : </ItemTitle>
-                                <ItemLink href="https://github.com/kyj9168">
+                                <ItemLink
+                                    target="_blank"
+                                    href="https://github.com/kyj9168"
+                                >
                                     https://github.com/kyj9168
                                 </ItemLink>
                             </Itemtxt>

@@ -14,7 +14,7 @@ import "./swiper.css";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Container = styled.article`
-    background-color: #ecf0f1;
+    background-color: #f9c51d;
 `;
 
 const ContentWrap = styled.div`
@@ -29,7 +29,7 @@ const ContentWrap = styled.div`
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
-    color: rgb(205, 41, 90);
+    color: #fff;
     @media (max-width: 994px) {
         text-align: center;
     }
@@ -68,8 +68,7 @@ const SkillList = styled.ul`
 const SkillCard = styled.li`
     position: relative;
     width: 250px;
-    height: 240px;
-    padding-top: 20px;
+    padding: 20px;
     background-color: #fff;
     border-radius: 15px;
     transition: box-shadow 0.2s linear;
@@ -78,25 +77,27 @@ const SkillCard = styled.li`
     transition: 400ms;
     &:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
     &:before {
         position: absolute;
         top: 0;
-        left: -102%;
+        left: -105%;
         width: 100%;
-        border: 1px solid rgb(205, 41, 90);
-        background-color: rgb(205, 41, 90);
+        border: 5px solid #f9a11d;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #f9a11d;
         content: "";
         transition: left 0.4s ease-in;
     }
     &:after {
         position: absolute;
         bottom: 0;
-        right: -102%;
+        right: -105%;
         width: 100%;
-        border: 1px solid rgb(205, 41, 90);
-        background-color: rgb(205, 41, 90);
+        border: 5px solid #f9a11d;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #f9a11d;
         content: "";
         transition: right 0.4s ease-in;
     }
@@ -115,8 +116,6 @@ const SkillCard = styled.li`
 
 const SkillCardSwiper = styled.li`
     position: relative;
-
-    height: 340px;
     background-color: #fff;
     border-radius: 15px;
     transition: box-shadow 0.2s linear;
@@ -136,8 +135,9 @@ const SkillCardSwiper = styled.li`
         top: 0;
         left: -102%;
         width: 100%;
-        border: 1px solid rgb(205, 41, 90);
-        background-color: rgb(205, 41, 90);
+        border: 5px solid #f9a11d;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #f9a11d;
         content: "";
         transition: left 0.4s ease-in;
     }
@@ -146,8 +146,9 @@ const SkillCardSwiper = styled.li`
         bottom: 0;
         right: -102%;
         width: 100%;
-        border: 1px solid rgb(205, 41, 90);
-        background-color: rgb(205, 41, 90);
+        border: 5px solid #f9a11d;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #f9a11d;
         content: "";
         transition: right 0.4s ease-in;
     }
@@ -167,6 +168,7 @@ const SkillCardSwiper = styled.li`
 // display: ${(props) => (props.current ? "block" : "none")};
 const CardImg = styled.img`
     height: 80px;
+    max-width: 100%;
 `;
 
 const CardTitle = styled.h4`
@@ -181,7 +183,6 @@ const CardStar = styled.span`
 
 const Cardtxt = styled.p`
     margin-top: 10px;
-    padding: 0 25px;
     font-size: 0.9rem;
     line-height: 1.5;
 `;
@@ -215,6 +216,7 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
                             </SkillCard>
                         ))}
                         <Swiper
+                            effect={"coverflow"} // 커버플로우 효과 사용
                             loop={true}
                             navigation
                             pagination={{ clickable: true }}
@@ -222,7 +224,7 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
                             style={{ height: "100%", padding: "30px" }}
                         >
                             {data.map((e, idx) => (
-                                <SwiperSlide>
+                                <SwiperSlide key={e.skill}>
                                     <SkillCardSwiper
                                         key={e.skill}
                                         current={slideCounter === idx}

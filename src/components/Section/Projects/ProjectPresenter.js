@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.article`
-    background-color: rgba(112, 161, 255, 0.1);
+    background-color: #1d809f;
 `;
 const ContentWrap = styled.div`
     width: 1200px;
@@ -16,7 +16,7 @@ const ContentWrap = styled.div`
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
-    color: rgb(216, 181, 255);
+    color: #FFF;
     @media (max-width: 994px) {
         text-align: center;
     }
@@ -40,8 +40,8 @@ const Card = styled.div`
     margin: 0 auto;
     width: 90%;
     height: 300px;
-    border-left: 8px solid rgb(216, 181, 255);
-    border-right: 8px solid rgb(216, 181, 255);
+    border-left: 8px solid #00000080;
+    border-right: 8px solid #00000080;
     border-radius: 5px;
     transition: box-shadow 0.2s ease-in-out;
     z-index: 1;
@@ -60,8 +60,8 @@ const Card = styled.div`
         width: 90%;
         height: 100%;
         border: none;
-        border-bottom: 4px solid rgb(216, 181, 255);
-        border-top: 4px solid rgb(216, 181, 255);
+        border-bottom: 4px solid #00000080;
+        border-top: 4px solid #00000080;
         &:hover ${CardImg} {
             transform: none;
         }
@@ -77,14 +77,14 @@ const CardContent = styled.div`
     @media (max-width: 994px) {
         padding: 5px 20px 0 20px;
         height: 200px;
-        border-top: 2px solid rgb(216, 181, 255);
+        border-top: 2px solid #1d809f;
     }
 `;
 
 const CardTitle = styled.h3`
     font-size: 1.5rem;
     font-weight: 600;
-    border-bottom: 2px solid rgb(216, 181, 255);
+    border-bottom: 2px solid #1d809f;
     @media (max-width: 540px) {
         font-size: 1.3rem;
     }
@@ -143,7 +143,7 @@ export default ({ data }) => (
                                 <ContentURL
                                     target="_blank"
                                     href={e.url}
-                                    name="'URL: '"
+                                    name="'URL : '"
                                 >
                                     {e.url}
                                 </ContentURL>

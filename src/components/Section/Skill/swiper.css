@@ -1,15 +1,15 @@
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
-    color: rgb(205, 41, 90);
+    color: #f9a11d;
 }
 
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
-    color: rgb(205, 41, 90);
+    color: #f9a11d;
 }
 
 .swiper-pagination-bullet-active {
-    background: rgb(205, 41, 90);
+    background: #f9a11d;
 }
 
 @media (min-width: 743px) {
