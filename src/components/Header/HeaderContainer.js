@@ -28,6 +28,12 @@ class HeaderContainer extends Component {
             isClickList: !isClickList,
         });
     };
+    CloseBtn = () => {
+        const { isClickList } = this.state;
+        this.setState({
+            isClickList: false,
+        });
+    };
 
     checkPos = () => {
         let bodyPos = window.scrollY;
@@ -80,6 +86,7 @@ class HeaderContainer extends Component {
                 project={project}
                 isClickList={isClickList}
                 toggleBtn={this.toggleBtn}
+                CloseBtn = {this.CloseBtn}
             />
         );
     }

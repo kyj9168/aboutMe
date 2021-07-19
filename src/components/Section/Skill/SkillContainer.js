@@ -57,7 +57,7 @@ class SkillContainer extends Component {
                 skill: "Node.js",
                 img: NODEIMG,
                 lv: 5,
-                txt: "개발자로 취업후 약 1년반동안 모든 프로젝트를 node.js로 해왔습니다.",
+                txt: "개발자로 취업후 약 1년반동안 모든 프로젝트의 백엔드를 node.js로 개발해 왔습니다.",
             },
             {
                 skill: "KAFKA",
@@ -81,7 +81,7 @@ class SkillContainer extends Component {
                 skill: "JPA",
                 img: JPAIMG,
                 lv: 1,
-                txt: "공부중에 있으며 SpringBoot를 공부할때 CRUD를 JPA로 개발하여 Rest API를 개발해본 경험이 있습니다.",
+                txt: "SpringBoot를 공부할때 CRUD를 JPA로 개발하여 Rest API를 개발해본 경험이 있습니다.",
             },
             {
                 skill: "LINUX",
@@ -105,13 +105,13 @@ class SkillContainer extends Component {
                 skill: "ELK STACK",
                 img: ELKIMG,
                 lv: 3,
-                txt: "형태소 분석기를 이용한 프로젝트 경험이 많아 엘라스틱을 잘다룰수 있습니다.",
+                txt: "형태소 분석기를 이용한 프로젝트 경험이 많아 엘라스틱을 잘 다룰수 있습니다.",
             },
             {
                 skill: "Spring Boot",
                 img: SPBTIMG,
                 lv: 1,
-                txt: "회사 업무외로 공부하여 Rest API를 개발한적이 있습니다.",
+                txt: "회사 업무외로 공부하여 Rest API를 개발하고 게시판을 만들어 본적이 있습니다.",
             },
             {
                 skill: "AWS",
@@ -123,7 +123,7 @@ class SkillContainer extends Component {
                 skill: "JAVA",
                 img: JAVAIMG,
                 lv: 2,
-                txt: "교육원에서 배웠던 언어로 절대 놓치고 싶지 않은 언어 입니다.",
+                txt: "교육원에서 배웠던 언어로 현재 서브 언어로 공부중에 있습니다.",
             },
             {
                 skill: "bitbucket",
@@ -138,39 +138,14 @@ class SkillContainer extends Component {
                 txt: "Git의 기본 명령어를 학습하고 현재 활용하고 있습니다.",
             },
         ],
-        slideCounter: 0,
     };
 
-    increaseCounter = () => {
-        const { slideCounter, data } = this.state;
-        slideCounter === data.length - 1
-            ? this.setState({
-                  slideCounter: 0,
-              })
-            : this.setState({
-                  slideCounter: slideCounter + 1,
-              });
-    };
-
-    decreaseCounter = () => {
-        const { slideCounter, data } = this.state;
-        slideCounter === 0
-            ? this.setState({
-                  slideCounter: data.length - 1,
-              })
-            : this.setState({
-                  slideCounter: slideCounter - 1,
-              });
-    };
 
     render() {
-        const { data, slideCounter } = this.state;
+        const { data } = this.state;
         return (
             <SkillPresenter
                 data={data}
-                slideCounter={slideCounter}
-                increaseCounter={this.increaseCounter}
-                decreaseCounter={this.decreaseCounter}
             />
         );
     }

@@ -186,7 +186,7 @@ const Cardtxt = styled.p`
     line-height: 1.5;
 `;
 
-export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
+export default ({ data}) => (
     <Container id="Skill">
         <ContentWrap>
             <Title>Skill</Title>
@@ -196,7 +196,6 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
                         {data.map((e, idx) => (
                             <SkillCard
                                 key={e.skill}
-                                current={slideCounter === idx}
                             >
                                 <CardImg src={e.img} alt={e.skill} />
                                 <CardTitle>{e.skill}</CardTitle>
@@ -230,7 +229,6 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
                                 <SwiperSlide key={e.skill}>
                                     <SkillCardSwiper
                                         key={e.skill}
-                                        current={slideCounter === idx}
                                     >
                                         <CardImg src={e.img} alt={e.skill} />
                                         <CardTitle>{e.skill}</CardTitle>

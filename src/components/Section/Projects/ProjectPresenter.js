@@ -131,6 +131,7 @@ export default ({ data }) => (
                         <Swiper
                             className="projectSwiper"
                             spaceBetween={0}
+                            
                         >
                             {e.img.map(function (item) {
                                 return (

@@ -120,6 +120,7 @@ export default ({
     skill,
     project,
     toggleBtn,
+    CloseBtn,
     isClickList,
 }) => (
     <Header current={pos > 0}>
@@ -142,22 +143,22 @@ export default ({
             </Button>
             <NavList current={isClickList}>
                 <Item current={pos >= home.top && pos <= home.bottom}>
-                    <Link href="#Home" onClick={toggleBtn}>
+                    <Link href="#Home" onClick={CloseBtn}>
                         Home
                     </Link>
                 </Item>
                 <Item current={pos >= about.top && pos <= about.bottom}>
-                    <Link href="#About" onClick={toggleBtn}>
+                    <Link href="#About" onClick={CloseBtn}>
                         About
                     </Link>
                 </Item>
                 <Item current={pos >= skill.top && pos <= skill.bottom}>
-                    <Link href="#Skill" onClick={toggleBtn}>
+                    <Link href="#Skill" onClick={CloseBtn}>
                         Skill
                     </Link>
                 </Item>
                 <Item current={pos >= project.top && pos <= project.bottom}>
-                    <Link href="#Project" onClick={toggleBtn}>
+                    <Link href="#Project" onClick={CloseBtn}>
                         Project
                     </Link>
                 </Item>
