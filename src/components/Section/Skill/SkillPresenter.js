@@ -8,7 +8,6 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-
 import "./swiper.css";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -216,12 +215,16 @@ export default ({ data, slideCounter, increaseCounter, decreaseCounter }) => (
                             </SkillCard>
                         ))}
                         <Swiper
-                            effect={"coverflow"} // 커버플로우 효과 사용
+                            className="skillSwipper"
                             loop={true}
                             navigation
                             pagination={{ clickable: true }}
                             spaceBetween={50}
-                            style={{ height: "100%", padding: "30px" }}
+                            style={{
+                                height: "100%",
+                                width: "100%",
+                                padding: "30px",
+                            }}
                         >
                             {data.map((e, idx) => (
                                 <SwiperSlide key={e.skill}>

@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 743px) {
-    .swiper-container {
+    .skillSwipper {
         display: none;
     }
 }

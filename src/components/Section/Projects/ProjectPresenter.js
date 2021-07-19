@@ -1,6 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+import "./swiper.css";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+
 const Container = styled.article`
     background-color: #1d809f;
 `;
@@ -16,7 +27,7 @@ const ContentWrap = styled.div`
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
-    color: #FFF;
+    color: #fff;
     @media (max-width: 994px) {
         text-align: center;
     }
@@ -28,57 +39,39 @@ const Content = styled.div`
 
 const CardImg = styled.img`
     height: 100%;
+    width: 100%;
     transition: transform 0.3s linear;
-    @media (max-width: 994px) {
-        height: auto;
-        width: 100%;
-    }
 `;
 
 const Card = styled.div`
-    display: flex;
-    margin: 0 auto;
+    display: block;
     width: 90%;
-    height: 300px;
-    border-left: 8px solid #00000080;
-    border-right: 8px solid #00000080;
-    border-radius: 5px;
-    transition: box-shadow 0.2s ease-in-out;
-    z-index: 1;
-    overflow: hidden;
+    height: 100%;
+    border: none;
+    border-bottom: 4px solid #00000080;
+    border-top: 4px solid #00000080;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover ${CardImg} {
+        transform: none;
+    }
     &:not(:last-child) {
         margin-bottom: 30px;
     }
     &:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
-    &:hover ${CardImg} {
-        transform: scale(1.1);
-    }
-    @media (max-width: 994px) {
-        display: block;
-        width: 90%;
-        height: 100%;
-        border: none;
-        border-bottom: 4px solid #00000080;
-        border-top: 4px solid #00000080;
-        &:hover ${CardImg} {
-            transform: none;
-        }
-    }
 `;
 
 const CardContent = styled.div`
     flex: 1;
-    padding: 60px 0 30px 30px;
     background-color: #fff;
     z-index: 2;
     line-height: 2;
-    @media (max-width: 994px) {
-        padding: 5px 20px 0 20px;
-        height: 200px;
-        border-top: 2px solid #1d809f;
-    }
+    width: 100%;
+    padding: 5px 20px 0 20px;
+    height: 200px;
+    border-top: 2px solid #1d809f;
 `;
 
 const CardTitle = styled.h3`
@@ -135,7 +128,22 @@ export default ({ data }) => (
             <Content>
                 {data.map((e) => (
                     <Card key={e.id}>
-                        <CardImg src={e.img} alt={e.id} />
+                        <Swiper
+                            className="projectSwiper"
+                            spaceBetween={0}
+                        >
+                            {e.img.map(function (item) {
+                                return (
+                                    <SwiperSlide key={item}>
+                                        <CardImg
+                                            src={item}
+                                            alt={e.id}
+                                            key={item}
+                                        />
+                                    </SwiperSlide>
+                                );
+                            })}
+                        </Swiper>
                         <CardContent>
                             <CardTitle>{e.id}</CardTitle>
                             <ContentTxt>{e.txt}</ContentTxt>
