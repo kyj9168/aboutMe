@@ -40,7 +40,12 @@ const Content = styled.div`
 const CardImg = styled.img`
     height: 100%;
     width: 100%;
-    transition: transform 0.3s linear;
+    transition: left 0.3s, transform 0.3s linear;
+
+    &:hover .swiper-wrapper {
+        left: -40px !important;
+        position: relative !important;
+    }
 `;
 
 const Card = styled.div`
@@ -70,7 +75,6 @@ const CardContent = styled.div`
     line-height: 2;
     width: 100%;
     padding: 5px 20px 0 20px;
-    height: 200px;
     border-top: 2px solid #1d809f;
 `;
 
@@ -130,8 +134,8 @@ export default ({ data }) => (
                     <Card key={e.id}>
                         <Swiper
                             className="projectSwiper"
+                            navigation
                             spaceBetween={0}
-                            
                         >
                             {e.img.map(function (item) {
                                 return (

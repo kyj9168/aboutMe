@@ -216,7 +216,7 @@ export default ({ data}) => (
                         <Swiper
                             className="skillSwipper"
                             loop={true}
-                            navigation
+                            
                             pagination={{ clickable: true }}
                             spaceBetween={50}
                             style={{

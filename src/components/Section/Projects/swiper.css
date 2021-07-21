@@ -7,3 +7,13 @@
         width: 100%;
     }
 }
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {}
+
+.swiper-button-disabled {
+    display: none;
+}
