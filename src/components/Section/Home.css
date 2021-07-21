@@ -7,7 +7,7 @@
 .Typewriter {
     font-size: 5rem;
     font-weight: 600;
-    color: rgba(20, 20, 20, 0.6);
+    color: rgba(20, 20, 20, 0.7);
     white-space: nowrap;
 }
 
@@ -26,5 +26,5 @@
 }
 
 .Subcolor {
-    color: rgb(191, 208, 152);
+    color: #81c2ff;
 }

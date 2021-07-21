@@ -75,7 +75,7 @@ const Item = styled.li`
     width: 90px;
     height: 100%;
     border-bottom: 3px solid
-        ${(props) => (props.current ? "rgb(191, 208, 152)" : "transparent")};
+        ${(props) => (props.current ? "#81c2ff" : "transparent")};
     transition: border-bottom 0.2s ease-in;
     &:hover {
         color: #aaa;
@@ -89,7 +89,7 @@ const Item = styled.li`
         text-align: center;
         &:hover {
             color: #fff;
-            background-color: rgb(191, 208, 152);
+            background-color: #81c2ff;
         }
     }
 `;
@@ -127,7 +127,7 @@ export default ({
         <HeaderWrap>
             <Link href="#Home">
                 <Logo>
-                    <span style={{ color: "rgb(191, 208, 152)" }}>
+                    <span style={{ color: "#81c2ff" }}>
                         youngJun's
                     </span>
                     <span> Portfolio</span>

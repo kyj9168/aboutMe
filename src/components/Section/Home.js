@@ -3,14 +3,7 @@ import styled, { keyframes } from "styled-components";
 import img from "../../assets/home.png";
 import Typewriter from "typewriter-effect";
 import "./Home.css";
-const blink = keyframes`
-  from, to {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-`;
+
 const Container = styled.div`
     position: relative;
     width: 100%;
@@ -22,17 +15,23 @@ const Container = styled.div`
 const Background = styled.div`
     width: 100%;
     height: 100%;
-    background-image: url(${img});
-    background-position: center center;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0.8)
+        ),
+        url(${img});
+    background-position: center 30%;
     background-size: cover;
-    filter: blur(3px);
-    opacity: 0.5;
+    opacity: 0.7;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
 `;
+// rgb(220 253 255))
+// filter: blur(3px);
 const TitleContainer = styled.div`
     position: absolute;
     top: 45%;
@@ -46,15 +45,6 @@ const TitleContainer = styled.div`
         ) repeat scroll 0 0;
     line-height: 1.5;
 `;
-const CursorSpan = styled.span`
-    font-weight: 100;
-    color: black;
-    font-size: 1em;
-    animation: ${blink} 1s step-end infinite;
-`;
-
-
-
 
 export default () => (
     <Container id="Home">
