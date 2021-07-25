@@ -90,7 +90,7 @@ const CardTitle = styled.h3`
 const ContentTxt = styled.p`
     font-size: 1.12rem;
     font-weight: 600;
-    color: #aaa;
+    color: #777;
     @media (max-width: 540px) {
         font-size: 1rem;
     }
@@ -125,6 +125,12 @@ const ContentUrl = styled.a`
     }
 `;
 
+const CardDescription = styled.h5`
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+`;
+
 export default ({ data }) => (
     <Container id="Project">
         <ContentWrap>
@@ -137,7 +143,7 @@ export default ({ data }) => (
                             navigation
                             spaceBetween={0}
                         >
-                            {e.img.map(function (item) {
+                            {e.img.map((item) => {
                                 return (
                                     <SwiperSlide key={item}>
                                         <CardImg
@@ -152,6 +158,21 @@ export default ({ data }) => (
                         <CardContent>
                             <CardTitle>{e.id}</CardTitle>
                             <ContentTxt>{e.txt}</ContentTxt>
+                            {e.skill && (
+                                <CardDescription>
+                                    <p>SKILL : &nbsp; </p>
+                                    {e.skill.map((item, idx) => {
+                                        console.log(idx);
+                                        if (idx !== e.skill.length - 1) {
+                                            return (
+                                                <p key={item}>{item},&nbsp; </p>
+                                            );
+                                        } else {
+                                            return <p key={item}>{item} </p>;
+                                        }
+                                    })}
+                                </CardDescription>
+                            )}
                             {e.url && (
                                 <ContentURL
                                     target="_blank"
@@ -159,15 +180,6 @@ export default ({ data }) => (
                                     name="'URL : '"
                                 >
                                     {e.url}
-                                </ContentURL>
-                            )}
-                            {e.pdf && (
-                                <ContentURL
-                                    target="_blank"
-                                    href={e.pdf}
-                                    name="'PDF: '"
-                                >
-                                    커뮤니티.pdf
                                 </ContentURL>
                             )}
 
