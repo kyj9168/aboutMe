@@ -17,8 +17,8 @@ const Background = styled.div`
     height: 100%;
     background-image: linear-gradient(
             to bottom,
-            rgba(255, 255, 255, 0.8),
-            rgba(255, 255, 255, 0.8)
+            rgba(245, 255, 255, 0.8),
+            rgba(230, 255, 255, 0.8)
         ),
         url(${img});
     background-position: center 30%;
