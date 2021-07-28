@@ -158,7 +158,7 @@ export default ({ data }) => (
                                 navigation
                                 spaceBetween={0}
                                 autoHeight={true}
-                                style={{ backgroundColor: "rgb(13 151 169)" }}
+                                style={{ backgroundColor: "rgb(7 75 84)" }}
                             >
                                 {e.img.map((item) => {
                                     return (
