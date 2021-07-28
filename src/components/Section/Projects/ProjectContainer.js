@@ -58,7 +58,7 @@ class ProjectContainer extends Component {
             },
             {
                 id: "GSretail aboutPet 검색 및 추천 API 개발",
-                url: "https://qi.kcisa.kr/",
+                url: "https://www.aboutpet.co.kr/shop/home/",
                 txt: [
                     "태그방식을 활용하여 자카드 유사도를 이용한 추천API 개발",
                 ],
@@ -69,7 +69,6 @@ class ProjectContainer extends Component {
             },
             {
                 id: "사내 개인프로젝트: QIT (Quality Improvement Test)",
-                url: "https://qi.kcisa.kr/",
                 txt: ["챗봇 지식구축 작가들을 위한 테스트 툴 개발"],
                 period: "2020.06 ~ 2021.09",
                 per: "사내 작사들을 위해 챗봇 지식을 구성하고 QIT를 돌려 각각 지식이 제대로 구성이 되어있는지 테스트 할 수있는 툴을 개발하였습니다. 이로인해 챗봇의 응답률을 더욱 높일 수 있게 되어 챗봇 솔루션에 보탬이 되었습니다.",
