@@ -29,7 +29,6 @@ class HeaderContainer extends Component {
         });
     };
     CloseBtn = () => {
-        const { isClickList } = this.state;
         this.setState({
             isClickList: false,
         });
@@ -86,7 +85,7 @@ class HeaderContainer extends Component {
                 project={project}
                 isClickList={isClickList}
                 toggleBtn={this.toggleBtn}
-                CloseBtn = {this.CloseBtn}
+                CloseBtn={this.CloseBtn}
             />
         );
     }

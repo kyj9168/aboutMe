@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import img from "../../assets/home.png";
 import Typewriter from "typewriter-effect";
 import "./Home.css";
