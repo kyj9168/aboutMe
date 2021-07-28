@@ -186,7 +186,7 @@ const Cardtxt = styled.p`
     line-height: 1.5;
 `;
 
-export default ({ data}) => (
+export default ({ data }) => (
     <Container id="Skill">
         <ContentWrap>
             <Title>Skill</Title>
@@ -194,9 +194,7 @@ export default ({ data}) => (
                 <Listwrap>
                     <SkillList>
                         {data.map((e, idx) => (
-                            <SkillCard
-                                key={e.skill}
-                            >
+                            <SkillCard key={e.skill}>
                                 <CardImg src={e.img} alt={e.skill} />
                                 <CardTitle>{e.skill}</CardTitle>
                                 <CardStar>
@@ -216,7 +214,6 @@ export default ({ data}) => (
                         <Swiper
                             className="skillSwipper"
                             loop={true}
-                            
                             pagination={{ clickable: true }}
                             spaceBetween={50}
                             style={{
@@ -227,9 +224,7 @@ export default ({ data}) => (
                         >
                             {data.map((e, idx) => (
                                 <SwiperSlide key={e.skill}>
-                                    <SkillCardSwiper
-                                        key={e.skill}
-                                    >
+                                    <SkillCardSwiper key={e.skill}>
                                         <CardImg src={e.img} alt={e.skill} />
                                         <CardTitle>{e.skill}</CardTitle>
                                         <CardStar>

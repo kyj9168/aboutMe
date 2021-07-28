@@ -40,11 +40,19 @@ const Content = styled.div`
 const CardImg = styled.img`
     height: 100%;
     width: 100%;
-    transition: left 0.3s, transform 0.3s linear;
+    object-fit: contain;
 
-    &:hover .swiper-wrapper {
-        left: -40px !important;
-        position: relative !important;
+    @media (min-width: 1100px) {
+        max-height: 700px;
+    }
+    @media (max-width: 1100px) {
+        max-height: 600px;
+    }
+    @media (max-width: 860px) {
+        max-height: 500px;
+    }
+    @media (max-width: 590px) {
+        max-height: 400px;
     }
 `;
 
@@ -74,7 +82,7 @@ const CardContent = styled.div`
     z-index: 2;
     line-height: 2;
     width: 100%;
-    padding: 5px 20px 0 20px;
+    padding: 5px 20px 5px 20px;
     border-top: 2px solid #1d809f;
 `;
 
@@ -130,7 +138,11 @@ const CardDescription = styled.h5`
     font-weight: 700;
     display: flex;
 `;
-
+const CardSubTitle = styled.p`
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+`;
 export default ({ data }) => (
     <Container id="Project">
         <ContentWrap>
@@ -138,55 +150,94 @@ export default ({ data }) => (
             <Content>
                 {data.map((e) => (
                     <Card key={e.id}>
-                        <Swiper
-                            className="projectSwiper"
-                            navigation
-                            spaceBetween={0}
-                        >
-                            {e.img.map((item) => {
-                                return (
-                                    <SwiperSlide key={item}>
-                                        <CardImg
-                                            src={item}
-                                            alt={e.id}
-                                            key={item}
-                                        />
-                                    </SwiperSlide>
-                                );
-                            })}
-                        </Swiper>
+                        {e.img && (
+                            <Swiper
+                                className="projectSwiper"
+                                navigation
+                                spaceBetween={0}
+                                autoHeight={true}
+                                style={{ backgroundColor: "rgb(13 151 169)" }}
+                            >
+                                {e.img.map((item) => {
+                                    return (
+                                        <SwiperSlide key={item}>
+                                            <CardImg
+                                                src={item}
+                                                alt={e.id}
+                                                key={item}
+                                            />
+                                        </SwiperSlide>
+                                    );
+                                })}
+                            </Swiper>
+                        )}
                         <CardContent>
-                            <CardTitle>{e.id}</CardTitle>
-                            <ContentTxt>{e.txt}</ContentTxt>
-                            {e.skill && (
-                                <CardDescription>
-                                    <p>SKILL : &nbsp; </p>
-                                    {e.skill.map((item, idx) => {
-                                        console.log(idx);
-                                        if (idx !== e.skill.length - 1) {
-                                            return (
-                                                <p key={item}>{item},&nbsp; </p>
-                                            );
-                                        } else {
-                                            return <p key={item}>{item} </p>;
-                                        }
+                            {e.id && <CardTitle>{e.id}</CardTitle>}
+                            {e.txt && (
+                                <>
+                                    <CardSubTitle>주요역할</CardSubTitle>
+                                    {e.txt.map((item, idx) => {
+                                        return (
+                                            <ContentTxt key={item}>
+                                                {item}
+                                            </ContentTxt>
+                                        );
                                     })}
-                                </CardDescription>
+                                    <hr />
+                                </>
+                            )}
+                            {e.per && (
+                                <>
+                                    <CardSubTitle>업무성과</CardSubTitle>
+                                    <ContentTxt>{e.per}</ContentTxt>
+                                    <hr />
+                                </>
+                            )}
+
+                            {e.period && (
+                                <>
+                                    <CardDescription>
+                                        수행기간 : {e.period}{" "}
+                                    </CardDescription>
+                                    <hr />
+                                </>
+                            )}
+                            {e.skill && (
+                                <>
+                                    <CardDescription>
+                                        SKILL : &nbsp;
+                                        {e.skill.map((item, idx) => {
+                                            console.log(idx);
+                                            if (idx !== e.skill.length - 1) {
+                                                return item + ", ";
+                                            } else {
+                                                return item;
+                                            }
+                                        })}
+                                    </CardDescription>
+                                    <hr />
+                                </>
                             )}
                             {e.url && (
-                                <ContentURL
-                                    target="_blank"
-                                    href={e.url}
-                                    name="'URL : '"
-                                >
-                                    {e.url}
-                                </ContentURL>
+                                <>
+                                    <ContentURL
+                                        target="_blank"
+                                        href={e.url}
+                                        name="'URL : '"
+                                    >
+                                        {e.url}
+                                    </ContentURL>
+                                    <hr />
+                                </>
                             )}
 
                             {e.git && (
-                                <ContentUrl target="_blank" href={e.git}>
-                                    깃허브
-                                </ContentUrl>
+                                <>
+                                    <ContentUrl target="_blank" href={e.git}>
+                                        깃허브
+                                    </ContentUrl>
+                                    <hr />
+                                </>
                             )}
                         </CardContent>
                     </Card>
