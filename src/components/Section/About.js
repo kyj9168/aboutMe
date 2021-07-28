@@ -104,6 +104,7 @@ const Itemtxt = styled.div`
 
 const ItemLink = styled.a`
     transition: color 0.2s ease-in-out;
+    word-break:break-all;
     &:hover {
         color: #333;
     }
@@ -120,9 +121,10 @@ const MyIntro = styled.div`
 `;
 
 const NotionIcon = styled.img`
-width: 25px;
-border-radius: 20%;
+    width: 25px;
+    border-radius: 20%;
 `;
+
 export default () => (
     <Container id="About">
         <Title>About</Title>
@@ -189,7 +191,7 @@ export default () => (
                         </ProfileItem>
                         <ProfileItem>
                             <ItemIcon>
-                                <NotionIcon  src={NOTION} size="2x" />
+                                <NotionIcon src={NOTION} size="2x" />
                             </ItemIcon>
                             <Itemtxt>
                                 <ItemTitle>Notion : </ItemTitle>
@@ -197,7 +199,7 @@ export default () => (
                                     target="_blank"
                                     href="https://kyjportfolio.notion.site/kyjportfolio/2382908379ac4bc5b44087e187d6e00e"
                                 >
-                                   https://kyjportfolio.notion.site/kyjportfolio
+                                    https://www.notion.so/kyjportfolio
                                 </ItemLink>
                             </Itemtxt>
                         </ProfileItem>
