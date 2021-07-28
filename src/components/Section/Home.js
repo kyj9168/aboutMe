@@ -17,8 +17,8 @@ const Background = styled.div`
     height: 100%;
     background-image: linear-gradient(
             to bottom,
-            rgba(245, 255, 255, 0.8),
-            rgba(230, 255, 255, 0.8)
+            rgba(255, 255, 255, 0.8),
+            rgba(200, 200, 200, 0.8)
         ),
         url(${img});
     background-position: center 30%;
@@ -29,6 +29,7 @@ const Background = styled.div`
     right: 0;
     left: 0;
     bottom: 0;
+    filter: blur(1px);
 `;
 // rgb(220 253 255))
 // filter: blur(3px);
