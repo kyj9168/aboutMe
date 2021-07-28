@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PROFILE from "../../assets/profile.png";
+import NOTION from "../../assets/notion-logo-1.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -118,6 +119,10 @@ const MyIntro = styled.div`
     }
 `;
 
+const NotionIcon = styled.img`
+width: 25px;
+border-radius: 20%;
+`;
 export default () => (
     <Container id="About">
         <Title>About</Title>
@@ -179,6 +184,20 @@ export default () => (
                                     href="https://github.com/kyj9168"
                                 >
                                     https://github.com/kyj9168
+                                </ItemLink>
+                            </Itemtxt>
+                        </ProfileItem>
+                        <ProfileItem>
+                            <ItemIcon>
+                                <NotionIcon  src={NOTION} size="2x" />
+                            </ItemIcon>
+                            <Itemtxt>
+                                <ItemTitle>Notion : </ItemTitle>
+                                <ItemLink
+                                    target="_blank"
+                                    href="https://kyjportfolio.notion.site/kyjportfolio/2382908379ac4bc5b44087e187d6e00e"
+                                >
+                                   https://kyjportfolio.notion.site/kyjportfolio
                                 </ItemLink>
                             </Itemtxt>
                         </ProfileItem>
