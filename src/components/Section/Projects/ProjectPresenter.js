@@ -108,6 +108,7 @@ const ContentURL = styled.a`
     font-weight: 700;
     transition: color 0.2s linear;
     color: #a9a9a9;
+    word-break: break-all;
     &:hover {
         color: #333;
     }
@@ -125,6 +126,7 @@ const ContentUrl = styled.a`
     font-weight: 700;
     transition: color 0.2s linear;
     color: #333;
+    
     &:hover {
         color: #a9a9a9;
     }
