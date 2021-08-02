@@ -69,7 +69,7 @@ class SkillContainer extends Component {
                 skill: "NIFI",
                 img: NIFIIMG,
                 lv: 2,
-                txt: "RDB와 ElasticSearch를 연동하기 위해 CDC를 사용하여 DB를 연동하고 수집하며 데이터를 다룰수 있습니다.",
+                txt: "RDB의 데이터를 ElasticSearch로 수집 하여 데이터를 다룰수 있고 실시간 연동을 위해 CDC를 공부하고 있습니다.",
             },
             {
                 skill: "JSP",
@@ -105,13 +105,13 @@ class SkillContainer extends Component {
                 skill: "ELK STACK",
                 img: ELKIMG,
                 lv: 3,
-                txt: "형태소 분석기를 이용한 프로젝트 경험이 많아 엘라스틱을 잘 다룰수 있습니다.",
+                txt: "형태소 분석기를 이용한 프로젝트 경험이 많아 ELK STACK을 잘 다룰수 있습니다.",
             },
             {
                 skill: "Spring Boot",
                 img: SPBTIMG,
                 lv: 1,
-                txt: "회사 업무외로 공부하여 Rest API를 개발하고 게시판을 만들어 본적이 있습니다.",
+                txt: "회사 업무 외로 공부하여 Rest API를 개발하고 게시판을 만들어 본적이 있습니다.",
             },
             {
                 skill: "AWS",
@@ -140,14 +140,9 @@ class SkillContainer extends Component {
         ],
     };
 
-
     render() {
         const { data } = this.state;
-        return (
-            <SkillPresenter
-                data={data}
-            />
-        );
+        return <SkillPresenter data={data} />;
     }
 }
 
