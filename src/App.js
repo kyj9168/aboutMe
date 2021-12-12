@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
@@ -19,17 +20,17 @@ import GlobalStyles from './components/GlobalStyles';
 import smoothscroll from 'smoothscroll-polyfill';
 
 library.add(faPhone, faBirthdayCake, faEnvelope, faStar, faBars, faTimes, faArrowLeft, faArrowRight);
-
-function App() {
-    smoothscroll.polyfill();
-    return (
-        <div className="App">
-            <Header />
-            <Section />
-            <Footer />
-            <GlobalStyles />
-        </div>
-    );
+class App extends Component {
+    render() {
+        smoothscroll.polyfill();
+        return (
+            <div className="App">
+                <Header />
+                <Section />
+                <Footer />
+                <GlobalStyles />
+            </div>
+        );
+    }
 }
-
 export default App;
