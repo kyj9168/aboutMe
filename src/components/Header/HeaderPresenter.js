@@ -1,15 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = styled.header`
     position: fixed;
     width: 100%;
     padding: 0 100px;
-    background-color: ${(props) => (props.current ? "#fff" : "transparent")};
+    background-color: ${(props) => (props.current ? '#fff' : 'transparent')};
     transition: all 0.1s linear;
-    box-shadow: ${(props) =>
-        props.current ? "0px 1px 5px 2px rgba(200,200,200, 0.8)" : "none"};
+    box-shadow: ${(props) => (props.current ? '0px 1px 5px 2px rgba(200,200,200, 0.8)' : 'none')};
     z-index: 2;
 
     @media (max-width: 994px) {
@@ -63,7 +62,7 @@ const NavList = styled.ul`
         display: block;
         position: absolute;
         width: 100%;
-        top: ${(props) => (props.current ? "100%" : "-300%")};
+        top: ${(props) => (props.current ? '100%' : '-300%')};
         left: 0;
         transition: top 0.3s ease-in;
         line-height: 3;
@@ -74,8 +73,7 @@ const NavList = styled.ul`
 const Item = styled.li`
     width: 90px;
     height: 100%;
-    border-bottom: 3px solid
-        ${(props) => (props.current ? "#81c2ff" : "transparent")};
+    border-bottom: 3px solid ${(props) => (props.current ? '#81c2ff' : 'transparent')};
     transition: border-bottom 0.2s ease-in;
     &:hover {
         color: #aaa;
@@ -94,10 +92,11 @@ const Item = styled.li`
     }
 `;
 
-const Link = styled.a`
+const Link = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
+    cursor: pointer;
     justify-content: center;
 `;
 
@@ -113,54 +112,31 @@ const MobCover = styled.div`
     }
 `;
 
-export default ({
-    pos,
-    home,
-    about,
-    skill,
-    project,
-    toggleBtn,
-    CloseBtn,
-    isClickList,
-}) => (
+export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClickList }) => (
     <Header current={pos > 0}>
         <HeaderWrap>
-            <Link href="#Home">
+            <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>
                 <Logo>
-                    <span style={{ color: "#81c2ff" }}>
-                        youngJun's
-                    </span>
+                    <span style={{ color: '#81c2ff' }}>youngJun's</span>
                     <span> Portfolio</span>
                 </Logo>
             </Link>
             <MobCover />
             <Button onClick={toggleBtn}>
-                {isClickList ? (
-                    <FontAwesomeIcon icon="times" size="2x" />
-                ) : (
-                    <FontAwesomeIcon icon="bars" size="2x" />
-                )}{" "}
+                {isClickList ? <FontAwesomeIcon icon="times" size="2x" /> : <FontAwesomeIcon icon="bars" size="2x" />}{' '}
             </Button>
             <NavList current={isClickList}>
                 <Item current={pos >= home.top && pos <= home.bottom}>
-                    <Link href="#Home" onClick={CloseBtn}>
-                        Home
-                    </Link>
+                    <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>Home</Link>
                 </Item>
                 <Item current={pos >= about.top && pos <= about.bottom}>
-                    <Link href="#About" onClick={CloseBtn}>
-                        About
-                    </Link>
+                    <Link onClick={() => CloseBtn(document.getElementById('About').offsetTop - 60)}>About</Link>
                 </Item>
                 <Item current={pos >= skill.top && pos <= skill.bottom}>
-                    <Link href="#Skill" onClick={CloseBtn}>
-                        Skill
-                    </Link>
+                    <Link onClick={() => CloseBtn(document.getElementById('Skill').offsetTop - 60)}>Skill</Link>
                 </Item>
                 <Item current={pos >= project.top && pos <= project.bottom}>
-                    <Link href="#Project" onClick={CloseBtn}>
-                        Project
-                    </Link>
+                    <Link onClick={() => CloseBtn(document.getElementById('Project').offsetTop - 60)}>Project</Link>
                 </Item>
             </NavList>
         </HeaderWrap>

@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import HeaderPresenter from "./HeaderPresenter";
+import React, { Component } from 'react';
+import HeaderPresenter from './HeaderPresenter';
 
 class HeaderContainer extends Component {
     state = {
@@ -28,13 +28,16 @@ class HeaderContainer extends Component {
             isClickList: !isClickList,
         });
     };
-    CloseBtn = () => {
+    CloseBtn = (posi) => {
+        window.scrollTo({ top: posi, left: 0, behavior: 'smooth' });
+
         this.setState({
             isClickList: false,
         });
     };
 
     checkPos = () => {
+        this.calcElement();
         let bodyPos = window.scrollY;
         this.setState({
             pos: bodyPos,
@@ -42,10 +45,10 @@ class HeaderContainer extends Component {
     };
 
     calcElement() {
-        const Home = document.getElementById("Home");
-        const About = document.getElementById("About");
-        const Skill = document.getElementById("Skill");
-        const Project = document.getElementById("Project");
+        const Home = document.getElementById('Home');
+        const About = document.getElementById('About');
+        const Skill = document.getElementById('Skill');
+        const Project = document.getElementById('Project');
         this.setState({
             home: {
                 top: Home.offsetTop,
@@ -65,15 +68,13 @@ class HeaderContainer extends Component {
             },
         });
     }
-
     componentDidMount() {
-        window.addEventListener("scroll", this.checkPos);
+        window.addEventListener('scroll', this.checkPos);
         this.calcElement();
     }
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.checkPos);
-    }
-
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.checkPos);
+    // }
     render() {
         const { pos, home, about, skill, project, isClickList } = this.state;
         return (
