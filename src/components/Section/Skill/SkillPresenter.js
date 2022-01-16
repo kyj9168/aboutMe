@@ -120,15 +120,15 @@ const SkillCardSwiper = styled.li`
     transition: box-shadow 0.2s linear;
     text-align: center;
     overflow: hidden;
-    transition: 400ms;
+    // transition: 400ms;
     margin-left: auto;
     margin-right: auto;
     padding: 50px;
     margin-bottom: 30px;
-    &:hover {
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        transform: scale(1.05);
-    }
+    // &:hover {
+    //     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    //     transform: scale(1.05);
+    // }
     // &:before {
     //     position: absolute;
     //     top: 0;
@@ -215,6 +215,7 @@ export default ({ data }) => (
                             className="skillSwipper"
                             loop={true}
                             pagination={{ clickable: true }}
+                            grabCursor={true}
                             spaceBetween={50}
                             style={{
                                 height: "100%",
@@ -223,7 +224,7 @@ export default ({ data }) => (
                             }}
                         >
                             {data.map((e, idx) => (
-                                <SwiperSlide key={e.skill}>
+                                <SwiperSlide key={e.skill} className="swipCard">
                                     <SkillCardSwiper key={e.skill}>
                                         <CardImg src={e.img} alt={e.skill} />
                                         <CardTitle>{e.skill}</CardTitle>

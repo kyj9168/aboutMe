@@ -1,5 +1,3 @@
-
-
 .swiper-pagination-bullet-active {
     background: #143334;
 }
@@ -7,5 +5,40 @@
 @media (min-width: 743px) {
     .skillSwipper {
         display: none;
+    }
+}
+
+.swipCard:nth-child(odd) {
+    animation-duration: 1s;
+    animation-name: scaleCard1;
+    animation-iteration-count: infinite;
+}
+.swipCard:nth-child(even) {
+    animation-duration: 1s;
+    animation-name: scaleCard2;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaleCard1 {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+@keyframes scaleCard2 {
+    0% {
+        top: -10px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: -10px;
     }
 }

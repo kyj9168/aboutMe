@@ -13,7 +13,7 @@ import "./swiper.css";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Container = styled.article`
-    background-color: #d59940;
+    background-color: #486c7c;
 `;
 const ContentWrap = styled.div`
     width: 1200px;
@@ -61,8 +61,8 @@ const Card = styled.div`
     width: 90%;
     height: 100%;
     border: none;
-    border-bottom: 4px solid #f9a11d;
-    border-top: 4px solid #f9a11d;
+    border-bottom: 4px solid #18313c;
+    border-top: 4px solid #18313c;
     margin-left: auto;
     margin-right: auto;
     &:hover ${CardImg} {
@@ -71,9 +71,9 @@ const Card = styled.div`
     &:not(:last-child) {
         margin-bottom: 30px;
     }
-    &:hover {
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    }
+    // &:hover {
+    //     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    // }
 `;
 
 const CardContent = styled.div`
@@ -83,13 +83,13 @@ const CardContent = styled.div`
     line-height: 2;
     width: 100%;
     padding: 5px 20px 5px 20px;
-    border-top: 2px solid #f9a11d;
+    border-top: 2px solid #18313c;
 `;
 
 const CardTitle = styled.h3`
     font-size: 1.5rem;
     font-weight: 600;
-    border-bottom: 2px solid #f9a11d;
+    border-bottom: 2px solid #18313c;
     @media (max-width: 540px) {
         font-size: 1.3rem;
     }
@@ -158,7 +158,7 @@ export default ({ data }) => (
                                 navigation
                                 spaceBetween={0}
                                 autoHeight={true}
-                                style={{ backgroundColor: "#f9a11d" }}
+                                style={{ backgroundColor: "rgb(128 166 183)" }}
                             >
                                 {e.img.map((item) => {
                                     return (

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Container = styled.article`
-    background-color: #000;
+    background-color: #191919;
     width: 100%;
     padding: 80px 0;
     @media (max-width: 1219px) {
@@ -17,7 +17,7 @@ const Container = styled.article`
 const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
-    color: #000;
+    color: #FFF;
     @media (max-width: 994px) {
         text-align: center;
     }
