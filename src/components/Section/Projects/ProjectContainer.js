@@ -6,11 +6,13 @@ import CIMG2 from 'assets/project/mobileqi2.png';
 import ISSUEIMG1 from 'assets/project/issueChat1.png';
 import ISSUEIMG2 from 'assets/project/issueChat2.png';
 import RCMSIMG1 from 'assets/project/rcms1.png';
+import RCMSIMG2 from 'assets/project/rcms2.png';
 import HEALIMG from 'assets/project/healing.png';
 import ABOUTPET1 from 'assets/project/aboutpet1.png';
 import ABOUTPET2 from 'assets/project/aboutpet2.png';
 import YONGIN1 from 'assets/project/yongin1.png';
 import YONGIN2 from 'assets/project/yongin2.png';
+import YONGIN3 from 'assets/project/yongin3.png';
 import QIT from 'assets/project/qit.png';
 
 class ProjectContainer extends Component {
@@ -41,7 +43,7 @@ class ProjectContainer extends Component {
                 txt: ['비목추천 API를 활용한 챗봇 API 개발과 react.js를 사용한 챗봇 화면 개발'],
                 period: '2019.12 ~ 2020.6',
                 per: 'ejs로만 개발하면 챗봇 화면의 프론트단을 react.js를 도입하자 제안하여 이 프로젝트 이후로 모든 챗봇 프로젝트의 master 챗봇 템플릿을 개발하였습니다.',
-                img: [RCMSIMG1],
+                img: [RCMSIMG1, RCMSIMG2],
                 skill: ['Node.js', 'ElasticSearch', 'react.js'],
             },
             {
@@ -76,7 +78,7 @@ class ProjectContainer extends Component {
                 txt: ['react.js를 활용한 프론트개발 및 무인민원발급기 및 직원검색 등 API 개발'],
                 period: '2021.09 ~ 2021.11',
                 per: '기존엔 hook방식으로만 개발하여 prop로 만 전달했던 데이터를 redux를 활용하여 state를 관리할수있게 템플릿을 개발하였습니다. middleware는 redux-saga를 사용하였습니다.',
-                img: [YONGIN1, YONGIN2],
+                img: [YONGIN1, YONGIN2, YONGIN3],
                 skill: ['Node.js', 'ElasticSearch', 'react.js', 'Nifi'],
             },
             {

@@ -73,7 +73,7 @@ const NavList = styled.ul`
 const Item = styled.li`
     width: 90px;
     height: 100%;
-    border-bottom: 3px solid ${(props) => (props.current ? '#81c2ff' : 'transparent')};
+    border-bottom: 3px solid ${(props) => (props.current ? '#78a6a4' : 'transparent')};
     transition: border-bottom 0.2s ease-in;
     &:hover {
         color: #aaa;
@@ -117,7 +117,7 @@ export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClick
         <HeaderWrap>
             <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>
                 <Logo>
-                    <span style={{ color: '#81c2ff' }}>youngJun's</span>
+                    <span style={{ color: '#78a6a4' }}>youngJun's</span>
                     <span> Portfolio</span>
                 </Logo>
             </Link>

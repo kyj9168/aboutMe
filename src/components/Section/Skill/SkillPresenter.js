@@ -13,7 +13,7 @@ import "./swiper.css";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const Container = styled.article`
-    background-color: #f9c51d;
+    background-color: #38897d;
 `;
 
 const ContentWrap = styled.div`
@@ -78,35 +78,35 @@ const SkillCard = styled.li`
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         transform: scale(1.1);
     }
-    &:before {
-        position: absolute;
-        top: 0;
-        left: -105%;
-        width: 100%;
-        border: 5px solid #f9a11d;
-        border-radius: 0px 15px 15px 0px;
-        background-color: #f9a11d;
-        content: "";
-        transition: left 0.4s ease-in;
-    }
-    &:after {
-        position: absolute;
-        bottom: 0;
-        right: -105%;
-        width: 100%;
-        border: 5px solid #f9a11d;
-        border-radius: 15px 0px 15px 15px;
-        background-color: #f9a11d;
-        content: "";
-        transition: right 0.4s ease-in;
-    }
+    // &:before {
+    //     position: absolute;
+    //     top: 0;
+    //     left: -105%;
+    //     width: 100%;
+    //     border: 5px solid #f9a11d;
+    //     border-radius: 0px 15px 15px 0px;
+    //     background-color: #f9a11d;
+    //     content: "";
+    //     transition: left 0.4s ease-in;
+    // }
+    // &:after {
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: -105%;
+    //     width: 100%;
+    //     border: 5px solid #f9a11d;
+    //     border-radius: 15px 0px 15px 15px;
+    //     background-color: #f9a11d;
+    //     content: "";
+    //     transition: right 0.4s ease-in;
+    // }
 
-    &:hover:before {
-        left: 0%;
-    }
-    &:hover:after {
-        right: 0%;
-    }
+    // &:hover:before {
+    //     left: 0%;
+    // }
+    // &:hover:after {
+    //     right: 0%;
+    // }
     @media (max-width: 590px) {
         display: none;
         margin: 0 auto;
@@ -129,35 +129,35 @@ const SkillCardSwiper = styled.li`
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         transform: scale(1.05);
     }
-    &:before {
-        position: absolute;
-        top: 0;
-        left: -105%;
-        width: 100%;
-        border: 5px solid #f9a11d;
-        border-radius: 0px 15px 15px 0px;
-        background-color: #f9a11d;
-        content: "";
-        transition: left 0.4s ease-in;
-    }
-    &:after {
-        position: absolute;
-        bottom: 0;
-        right: -105%;
-        width: 100%;
-        border: 5px solid #f9a11d;
-        border-radius: 15px 0px 0px 15px;
-        background-color: #f9a11d;
-        content: "";
-        transition: right 0.4s ease-in;
-    }
+    // &:before {
+    //     position: absolute;
+    //     top: 0;
+    //     left: -105%;
+    //     width: 100%;
+    //     border: 5px solid #f9a11d;
+    //     border-radius: 0px 15px 15px 0px;
+    //     background-color: #f9a11d;
+    //     content: "";
+    //     transition: left 0.4s ease-in;
+    // }
+    // &:after {
+    //     position: absolute;
+    //     bottom: 0;
+    //     right: -105%;
+    //     width: 100%;
+    //     border: 5px solid #f9a11d;
+    //     border-radius: 15px 0px 0px 15px;
+    //     background-color: #f9a11d;
+    //     content: "";
+    //     transition: right 0.4s ease-in;
+    // }
 
-    &:hover:before {
-        left: 0%;
-    }
-    &:hover:after {
-        right: 0%;
-    }
+    // &:hover:before {
+    //     left: 0%;
+    // }
+    // &:hover:after {
+    //     right: 0%;
+    // }
     @media (min-width: 590px) {
         display: none;
         margin: 0 auto;
