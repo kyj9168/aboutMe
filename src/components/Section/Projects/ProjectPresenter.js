@@ -158,6 +158,7 @@ export default ({ data }) => (
                                 navigation
                                 spaceBetween={0}
                                 autoHeight={true}
+                                grabCursor={true}
                                 style={{ backgroundColor: "rgb(128 166 183)" }}
                             >
                                 {e.img.map((item) => {

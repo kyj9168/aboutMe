@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import "swiper/swiper.scss";
-import "swiper/components/navigation/navigation.scss";
-import "swiper/components/pagination/pagination.scss";
-import "swiper/components/scrollbar/scrollbar.scss";
-import "./swiper.css";
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+import './swiper.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -201,11 +201,7 @@ export default ({ data }) => (
                                     {Array(e.lv)
                                         .fill(1)
                                         .map((e, idx) => (
-                                            <FontAwesomeIcon
-                                                icon="star"
-                                                color="#f1c40f"
-                                                key={idx}
-                                            />
+                                            <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
                                         ))}
                                 </CardStar>
                                 <Cardtxt>{e.txt}</Cardtxt>
@@ -216,11 +212,11 @@ export default ({ data }) => (
                             loop={true}
                             pagination={{ clickable: true }}
                             grabCursor={true}
-                            spaceBetween={50}
+                            spaceBetween={20}
                             style={{
-                                height: "100%",
-                                width: "100%",
-                                padding: "30px",
+                                height: '100%',
+                                width: '100%',
+                                padding: '30px',
                             }}
                         >
                             {data.map((e, idx) => (
@@ -232,11 +228,7 @@ export default ({ data }) => (
                                             {Array(e.lv)
                                                 .fill(1)
                                                 .map((e, idx) => (
-                                                    <FontAwesomeIcon
-                                                        icon="star"
-                                                        color="#f1c40f"
-                                                        key={idx}
-                                                    />
+                                                    <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
                                                 ))}
                                         </CardStar>
                                         <Cardtxt>{e.txt}</Cardtxt>
