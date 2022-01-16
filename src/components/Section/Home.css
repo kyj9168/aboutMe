@@ -18,16 +18,16 @@
     }
 }
 
-@media(min-width: 300px) and  (max-width: 540px) {
+@media (min-width: 300px) and (max-width: 540px) {
     .Title,
     .Typewriter {
         font-size: 1.7rem;
     }
 }
-@media(min-width: 300px) and  (max-width: 540px) {
+@media (max-width: 300px) {
     .Title,
     .Typewriter {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
 .Subcolor {
