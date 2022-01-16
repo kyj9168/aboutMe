@@ -1,8 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import img from "../../assets/home.png";
-import Typewriter from "typewriter-effect";
-import "./Home.css";
+import React from 'react';
+import styled from 'styled-components';
+import img from '../../assets/home.png';
+import Typewriter from 'typewriter-effect';
+import './Home.css';
+import HomeArrow from '../../assets/homeArrow.png';
 
 const Container = styled.div`
     position: relative;
@@ -15,12 +16,7 @@ const Container = styled.div`
 const Background = styled.div`
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.8),
-            rgba(200, 200, 200, 0.8)
-        ),
-        url(${img});
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.8)), url(${img});
     background-position: center 30%;
     background-size: cover;
     opacity: 0.7;
@@ -38,13 +34,25 @@ const TitleContainer = styled.div`
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: transparent -webkit-linear-gradient(
-            left,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.075),
-            rgba(0, 0, 0, 0)
-        ) repeat scroll 0 0;
+    background: transparent -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0)) repeat scroll 0 0;
     line-height: 1.5;
+`;
+
+const ArrowBtn = styled.button`
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
 export default () => (
@@ -64,18 +72,19 @@ export default () => (
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
-                        .typeString(
-                            "<span class='Title'>안녕하세요!</span><br>"
-                        )
-                        .typeString(
-                            "<span class='Title'>능동적인 태도로 항상 발전을 이루는</span><br>"
-                        )
-                        .typeString(
-                            "<span class='Title'> <span class='Title Subcolor'> Web Developer</span> 김영준입니다.</span>"
-                        )
+                        .typeString("<span class='Title'>안녕하세요!</span><br>")
+                        .typeString("<span class='Title'>능동적인 태도로 항상 발전을 이루는</span><br>")
+                        .typeString("<span class='Title'> <span class='Title Subcolor'> Web Developer</span> 김영준입니다.</span><br>")
                         .start();
                 }}
             />
         </TitleContainer>
+        <ArrowBtn
+            onClick={() => {
+                window.scrollTo({ top: document.getElementById('About').offsetTop - 60, left: 0, behavior: 'smooth' });
+            }}
+        >
+            <img src={HomeArrow} className="arrowBtnImg" />
+        </ArrowBtn>
     </Container>
 );
