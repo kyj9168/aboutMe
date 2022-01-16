@@ -9,6 +9,8 @@ import RCMSIMG1 from 'assets/project/rcms1.png';
 import HEALIMG from 'assets/project/healing.png';
 import ABOUTPET1 from 'assets/project/aboutpet1.png';
 import ABOUTPET2 from 'assets/project/aboutpet2.png';
+import YONGIN1 from 'assets/project/yongin1.png';
+import YONGIN2 from 'assets/project/yongin2.png';
 import QIT from 'assets/project/qit.png';
 
 class ProjectContainer extends Component {
@@ -34,17 +36,8 @@ class ProjectContainer extends Component {
                 skill: ['Node.js', 'socket.io', 'Kafka', 'Nifi'],
             },
             {
-                id: '문화정보원 큐아이 챗봇API, 모바일큐아이 2차 개발',
-                url: 'https://qi.kcisa.kr/',
-                txt: ['문화정보원 기관의 국립중앙도서관, 국립어린이도서관, 제주국제공항, 국립제주박물관 4개 기관의 챗봇 API 구축과 모바일 큐아이 챗봇 화면 개발'],
-                period: '2019.11 ~ 2019.12',
-                per: '첫 node.js 프로젝트로 node.js를 활용하여 챗봇 API를 구축하고 ejs로 챗봇의 화면 개발을 진행했습니다.',
-                img: [CIMG, CIMG2],
-                skill: ['Node.js', 'ElasticSearch', 'ejs', '공공데이터포털'],
-            },
-            {
                 id: ' 산업기술평가원 RCMS 챗봇 개발',
-                url:'https://chatbot.rcms.go.kr/',
+                url: 'https://chatbot.rcms.go.kr/',
                 txt: ['비목추천 API를 활용한 챗봇 API 개발과 react.js를 사용한 챗봇 화면 개발'],
                 period: '2019.12 ~ 2020.6',
                 per: 'ejs로만 개발하면 챗봇 화면의 프론트단을 react.js를 도입하자 제안하여 이 프로젝트 이후로 모든 챗봇 프로젝트의 master 챗봇 템플릿을 개발하였습니다.',
@@ -52,10 +45,10 @@ class ProjectContainer extends Component {
                 skill: ['Node.js', 'ElasticSearch', 'react.js'],
             },
             {
-                id: '문화정보원 큐아이 챗봇API, 모바일큐아이 3차 개발',
+                id: '문화정보원 큐아이 챗봇API, 모바일큐아이 개발',
                 url: 'https://qi.kcisa.kr/',
-                txt: ['문화정보원 기관의 국립태권도박물관, 국립아시아문화전당, 국립국악원 3개 기관의 챗봇 API 구축과 모바일 큐아이 챗봇 화면 개발'],
-                period: '2020.06 ~ 2021.01',
+                txt: ['문화정보원 기관의 국립중앙도서관 등 기관의 챗봇 API 구축과 모바일 큐아이 챗봇 화면 개발'],
+                period: '2019.11 ~ 2022.01',
                 per: '챗봇 프론트 단의 모든 오류와 챗봇 기존에 없던 자동완성 API, 금지어 API, 미응답 질의 자동추천 API를 직접 개발하여 회사 내 서비스로 배포하였습니다',
                 img: [CIMG, CIMG2],
                 skill: ['Node.js', 'ElasticSearch', 'ejs', '공공데이터포털'],
@@ -76,6 +69,15 @@ class ProjectContainer extends Component {
                 per: '회사의 검색솔루션을 하나의 API로 통합하기 위한 standard API를 개발하였고 태그 방식의 추천 로직을 직접 구성하여 추천 API 개발을 하였습니다.',
                 img: [ABOUTPET1, ABOUTPET2],
                 skill: ['Node.js', 'ElasticSearch', 'Kafka', 'Nifi'],
+            },
+            {
+                id: '용인시청 민원상담 챗봇 개발',
+                url: 'https://www.yongin.go.kr/chat',
+                txt: ['react.js를 활용한 프론트개발 및 무인민원발급기 및 직원검색 등 API 개발'],
+                period: '2021.09 ~ 2021.11',
+                per: '기존엔 hook방식으로만 개발하여 prop로 만 전달했던 데이터를 redux를 활용하여 state를 관리할수있게 템플릿을 개발하였습니다. middleware는 redux-saga를 사용하였습니다.',
+                img: [YONGIN1, YONGIN2],
+                skill: ['Node.js', 'ElasticSearch', 'react.js', 'Nifi'],
             },
             {
                 id: '사내 개인프로젝트: QIT (Quality Improvement Test)',
