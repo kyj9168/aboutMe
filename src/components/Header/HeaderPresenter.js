@@ -31,7 +31,7 @@ const Button = styled.button`
     color: #000;
     display: none;
     outline: none;
-    margin-right: 30px;
+    margin-right: 15px;
     cursor: pointer;
     text-align: center;
     @media (max-width: 994px) {
@@ -45,7 +45,7 @@ const Logo = styled.h1`
     height: 100%;
     transition: 0.3s;
     @media (max-width: 994px) {
-        margin-left: 30px;
+        margin-left: 15px;
         z-index: 2;
     }
     &:hover {
