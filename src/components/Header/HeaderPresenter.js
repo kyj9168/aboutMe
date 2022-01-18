@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = styled.header`
@@ -49,7 +50,7 @@ const Logo = styled.h1`
         z-index: 2;
     }
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 `;
 
@@ -123,7 +124,12 @@ export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClick
                 </Logo>
             </Link>
             <MobCover />
-            <Button onClick={toggleBtn}>{isClickList ? <FontAwesomeIcon icon="times" size="2x" /> : <FontAwesomeIcon icon="bars" size="2x" />} </Button>
+            <button onClick={toggleBtn} className={isClickList ? 'closeBtn' : 'menuBtn'}>
+                <div />
+                <div />
+                <div />
+            </button>
+            {/* <Button onClick={toggleBtn}>{isClickList ? <FontAwesomeIcon icon="times" size="2x" /> : <FontAwesomeIcon icon="bars" size="2x" />} </Button> */}
             <NavList current={isClickList}>
                 <Item current={pos >= home.top && pos <= home.bottom}>
                     <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>Home</Link>
