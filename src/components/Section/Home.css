@@ -1,17 +1,22 @@
 .Title {
-    font-size: 4rem;
+    font-size: 5vmin;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .Typewriter {
-    font-size: 4rem;
+    font-size: 5vmin;
     font-weight: 600;
     color: rgba(20, 20, 20, 0.7);
     white-space: nowrap;
 }
-
-@media (min-width: 540px) and (max-width: 994px) {
+@media (min-width: 994px){
+    .Title,
+    .Typewriter {
+        font-size: 3.5rem;
+    }
+}
+/* @media (min-width: 540px) and (max-width: 994px) {
     .Title,
     .Typewriter {
         font-size: 2.5rem;
@@ -29,7 +34,7 @@
     .Typewriter {
         font-size: 1.2rem;
     }
-}
+} */
 .Subcolor {
     color: rgb(120, 166, 164);
 }

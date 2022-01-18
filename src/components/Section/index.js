@@ -5,15 +5,13 @@ import About from './About';
 import Skill from './Skill';
 import Project from './Projects';
 
-
 const Container = styled.section`
     width: 100%;
-    @media(max-width: 994px){
+    @media (max-width: 994px) {
         padding-top: 60px;
     }
-    
-`;
 
+`;
 export default () => (
     <Container>
         <Home />
@@ -22,4 +20,3 @@ export default () => (
         <Project />
     </Container>
 );
-

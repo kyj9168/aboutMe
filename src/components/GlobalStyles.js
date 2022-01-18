@@ -17,6 +17,19 @@ const globalStyles = createGlobalStyle`
         color:#333;
 
     }
+    
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(10vh);
+        visibility: hidden;
+        transition: opacity 1400ms ease-out, transform 700ms ease-out, visibility 1400ms ease-out;
+        will-change: opacity, transform, visibility;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+    }
 `;
 
 export default globalStyles;

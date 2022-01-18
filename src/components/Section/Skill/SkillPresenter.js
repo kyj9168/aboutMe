@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import FadeInSection from '../../Util';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
@@ -189,7 +190,10 @@ const Cardtxt = styled.p`
 export default ({ data }) => (
     <Container id="Skill">
         <ContentWrap>
-            <Title>Skill</Title>
+            <FadeInSection>
+                <Title>Skill</Title>
+            </FadeInSection>
+            <FadeInSection>
             <Content>
                 <Listwrap>
                     <SkillList>
@@ -239,6 +243,7 @@ export default ({ data }) => (
                     </SkillList>
                 </Listwrap>
             </Content>
+            </FadeInSection>
         </ContentWrap>
     </Container>
 );
