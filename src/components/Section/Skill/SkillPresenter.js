@@ -213,7 +213,7 @@ export default ({ data }) => (
                         ))}
                         <Swiper
                             className="skillSwipper"
-                            loop={true}
+                            loop={false}
                             pagination={{ clickable: true }}
                             grabCursor={true}
                             spaceBetween={20}
