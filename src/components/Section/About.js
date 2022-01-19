@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PROFILE from '../../assets/profile.png';
 import NOTION from '../../assets/notion_logo.png';
-import FadeInSection from '../Util';
+import FadeInSection from '../Util/FadeIn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 

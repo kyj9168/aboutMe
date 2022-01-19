@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SwiperCore, { Navigation, EffectCards, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import FadeInSection from '../../Util';
+import FadeInSection from '../../Util/FadeIn';
 
 // import 'swiper/swiper.scss';
 
@@ -170,7 +170,7 @@ const SkillCardSwiper = styled.li`
 
 // display: ${(props) => (props.current ? "block" : "none")};
 const CardImg = styled.img`
-    height: 80px;
+    max-height: 80px;
     max-width: 100%;
 `;
 

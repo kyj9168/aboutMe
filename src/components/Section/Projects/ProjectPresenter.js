@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
-import FadeInSection from '../../Util';
+import FadeInSection from '../../Util/FadeIn';
 
 import 'swiper/swiper.min.css';
 import 'swiper/modules/navigation/navigation.min.css';
