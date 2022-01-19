@@ -76,7 +76,7 @@ const WINDOW = styled.div`
         background: -o-linear-gradient(top, #ebebeb, #d5d5d5);
         background: linear-gradient(top, #ebebeb, #d5d5d5);
         color: #4d494d;
-        font-size: 11pt;
+        font-size: 9pt;
         line-height: 20px;
         text-align: center;
         width: 100%;
@@ -227,6 +227,7 @@ const SkillList = styled.ul`
 const SkillCard = styled.li`
     position: relative;
     width: 250px;
+    height:fit-content;
     // padding: 20px;
     background-color: #fff;
     // border-radius: 15px;
@@ -237,7 +238,7 @@ const SkillCard = styled.li`
     border-radius: 6px;
     &:hover {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
     // &:before {
     //     position: absolute;
@@ -329,8 +330,8 @@ const SkillCardSwiper = styled.li`
 
 // display: ${(props) => (props.current ? "block" : "none")};
 const CardImg = styled.img`
-    max-height: 80px;
     max-width: 100%;
+    max-height: 120px;
 `;
 
 const CardTitle = styled.h4`
