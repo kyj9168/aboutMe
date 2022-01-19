@@ -48,7 +48,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
-                    color: '#e55253',
+                    color: '#fe5b5c',
                 }}
                 icon="phone"
                 size="2x"
@@ -60,7 +60,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
-                    color: '#ffca00',
+                    color: '#ffbd4c',
                 }}
                 icon="envelope"
                 size="2x"
@@ -72,7 +72,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
-                    color: '#01b701',
+                    color: '#00ca56',
                 }}
                 icon={faGithub}
                 size="2x"
