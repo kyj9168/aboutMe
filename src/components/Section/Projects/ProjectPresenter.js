@@ -6,9 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
 import FadeInSection from '../../Util';
 
-
-import 'swiper/swiper.min.css'
-import 'swiper/modules/navigation/navigation.min.css'
+import 'swiper/swiper.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
 // import 'swiper/swiper.scss';
 // import 'swiper/modules/pagination/pagination.min.css'
 // import 'swiper/components/navigation/navigation.scss';
@@ -165,83 +164,85 @@ export default ({ data }) => (
                 {data.map((e) => (
                     <Card key={e.id}>
                         <FadeInSection>
-                            {e.img && (
-                                <Swiper
-                                    className="projectSwiper"
-                                    navigation
-                                    spaceBetween={0}
-                                    autoHeight={true}
-                                    grabCursor={true}
-                                    style={{ backgroundColor: 'rgb(128 166 183)', borderRadius: '10px 10px 0 0' }}
-                                >
-                                    {e.img.map((item) => {
-                                        return (
-                                            <SwiperSlide key={item}>
-                                                <CardImg src={item} alt={e.id} key={item} />
-                                            </SwiperSlide>
-                                        );
-                                    })}
-                                </Swiper>
-                            )}
-                            <CardContent>
-                                {e.id && <CardTitle>{e.id}</CardTitle>}
-                                {e.txt && (
-                                    <>
-                                        <CardSubTitle>주요역할</CardSubTitle>
-                                        {e.txt.map((item, idx) => {
-                                            return <ContentTxt key={item}>{item}</ContentTxt>;
+                            <div style={{ boxShadow: '0 15px 30px rgba(0, 0, 0, 0.2)' }}>
+                                {e.img && (
+                                    <Swiper
+                                        className="projectSwiper"
+                                        navigation
+                                        spaceBetween={0}
+                                        autoHeight={true}
+                                        grabCursor={true}
+                                        style={{ backgroundColor: 'rgb(128 166 183)', borderRadius: '10px 10px 0 0' }}
+                                    >
+                                        {e.img.map((item) => {
+                                            return (
+                                                <SwiperSlide key={item}>
+                                                    <CardImg src={item} alt={e.id} key={item} />
+                                                </SwiperSlide>
+                                            );
                                         })}
-                                        <hr />
-                                    </>
+                                    </Swiper>
                                 )}
-                                {e.per && (
-                                    <>
-                                        <CardSubTitle>업무성과</CardSubTitle>
-                                        <ContentTxt>{e.per}</ContentTxt>
-                                        <hr />
-                                    </>
-                                )}
-
-                                {e.period && (
-                                    <>
-                                        <CardDescription>수행기간 : {e.period} </CardDescription>
-                                        <hr />
-                                    </>
-                                )}
-                                {e.skill && (
-                                    <>
-                                        <CardDescription>
-                                            SKILL : &nbsp;
-                                            {e.skill.map((item, idx) => {
-                                                // console.log(idx);
-                                                if (idx !== e.skill.length - 1) {
-                                                    return item + ', ';
-                                                } else {
-                                                    return item;
-                                                }
+                                <CardContent>
+                                    {e.id && <CardTitle>{e.id}</CardTitle>}
+                                    {e.txt && (
+                                        <>
+                                            <CardSubTitle>주요역할</CardSubTitle>
+                                            {e.txt.map((item, idx) => {
+                                                return <ContentTxt key={item}>{item}</ContentTxt>;
                                             })}
-                                        </CardDescription>
-                                        <hr />
-                                    </>
-                                )}
-                                {e.url && (
-                                    <>
-                                        <ContentURL target="_blank" href={e.url} name="'URL : '">
-                                            {e.url}
-                                        </ContentURL>
-                                        <hr />
-                                    </>
-                                )}
+                                            <hr />
+                                        </>
+                                    )}
+                                    {e.per && (
+                                        <>
+                                            <CardSubTitle>업무성과</CardSubTitle>
+                                            <ContentTxt>{e.per}</ContentTxt>
+                                            <hr />
+                                        </>
+                                    )}
 
-                                {e.git && (
-                                    <>
-                                        <ContentUrl target="_blank" href={e.git}>
-                                            깃허브
-                                        </ContentUrl>
-                                        <hr />
-                                    </>
-                                )}
-                            </CardContent>
+                                    {e.period && (
+                                        <>
+                                            <CardDescription>수행기간 : {e.period} </CardDescription>
+                                            <hr />
+                                        </>
+                                    )}
+                                    {e.skill && (
+                                        <>
+                                            <CardDescription>
+                                                SKILL : &nbsp;
+                                                {e.skill.map((item, idx) => {
+                                                    // console.log(idx);
+                                                    if (idx !== e.skill.length - 1) {
+                                                        return item + ', ';
+                                                    } else {
+                                                        return item;
+                                                    }
+                                                })}
+                                            </CardDescription>
+                                            <hr />
+                                        </>
+                                    )}
+                                    {e.url && (
+                                        <>
+                                            <ContentURL target="_blank" href={e.url} name="'URL : '">
+                                                {e.url}
+                                            </ContentURL>
+                                            <hr />
+                                        </>
+                                    )}
+
+                                    {e.git && (
+                                        <>
+                                            <ContentUrl target="_blank" href={e.git}>
+                                                깃허브
+                                            </ContentUrl>
+                                            <hr />
+                                        </>
+                                    )}
+                                </CardContent>
+                            </div>
                         </FadeInSection>
                     </Card>
                 ))}
