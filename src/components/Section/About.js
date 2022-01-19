@@ -48,7 +48,8 @@ const ProfileText = styled.div`
 `;
 
 const ProfileImg = styled.img`
-    width: 280px;
+    max-width: 280px;
+    width:90%;
     border-radius: 20%;
 `;
 
