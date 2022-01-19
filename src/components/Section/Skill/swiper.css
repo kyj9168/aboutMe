@@ -2,6 +2,9 @@
     background: #143334;
 }
 
+.swiper-slide {
+border-radius: 15px;
+}
 @media (min-width: 743px) {
     .skillSwipper {
         display: none;
