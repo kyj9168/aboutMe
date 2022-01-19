@@ -211,6 +211,7 @@ export default ({ data }) => (
                         <Swiper
                             className="skillSwipper"
                             grabCursor={true}
+                            loop={true}
                             effect={'cards'} 
                             style={{
                                 height: '100%',
