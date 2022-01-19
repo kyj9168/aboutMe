@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SwiperCore, { Navigation, EffectCards,Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, EffectCards, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import FadeInSection from '../../Util';
 
-import 'swiper/swiper.scss';
+// import 'swiper/swiper.scss';
+
+import 'swiper/swiper.min.css'
+
+// import 'swiper/modules/effect-cards/effect-cards.min.css'
 import './swiper.css';
 
-SwiperCore.use([Navigation, Pagination, EffectCards,Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, EffectCards, Scrollbar, A11y]);
 
 const Container = styled.article`
     background-color: #38897d;
@@ -191,54 +195,54 @@ export default ({ data }) => (
                 <Title>Skill</Title>
             </FadeInSection>
             <FadeInSection>
-            <Content>
-                <Listwrap>
-                    <SkillList>
-                        {data.map((e, idx) => (
-                            <SkillCard key={e.skill}>
-                                <CardImg src={e.img} alt={e.skill} />
-                                <CardTitle>{e.skill}</CardTitle>
-                                <CardStar>
-                                    {Array(e.lv)
-                                        .fill(1)
-                                        .map((e, idx) => (
-                                            <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
-                                        ))}
-                                </CardStar>
-                                <Cardtxt>{e.txt}</Cardtxt>
-                            </SkillCard>
-                        ))}
-                        <Swiper
-                            className="skillSwipper"
-                            grabCursor={true}
-                            loop={true}
-                            effect={'cards'} 
-                            style={{
-                                height: '100%',
-                                width: '100%',
-                                padding: '30px',
-                            }}
-                        >
+                <Content>
+                    <Listwrap>
+                        <SkillList>
                             {data.map((e, idx) => (
-                                <SwiperSlide key={e.skill} className="swipCard">
-                                    <SkillCardSwiper key={e.skill}>
-                                        <CardImg src={e.img} alt={e.skill} />
-                                        <CardTitle>{e.skill}</CardTitle>
-                                        <CardStar>
-                                            {Array(e.lv)
-                                                .fill(1)
-                                                .map((e, idx) => (
-                                                    <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
-                                                ))}
-                                        </CardStar>
-                                        <Cardtxt>{e.txt}</Cardtxt>
-                                    </SkillCardSwiper>
-                                </SwiperSlide>
+                                <SkillCard key={e.skill}>
+                                    <CardImg src={e.img} alt={e.skill} />
+                                    <CardTitle>{e.skill}</CardTitle>
+                                    <CardStar>
+                                        {Array(e.lv)
+                                            .fill(1)
+                                            .map((e, idx) => (
+                                                <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
+                                            ))}
+                                    </CardStar>
+                                    <Cardtxt>{e.txt}</Cardtxt>
+                                </SkillCard>
                             ))}
-                        </Swiper>
-                    </SkillList>
-                </Listwrap>
-            </Content>
+                            <Swiper
+                                className="skillSwipper"
+                                grabCursor={true}
+                                loop={true}
+                                effect={'cards'}
+                                style={{
+                                    height: '100%',
+                                    width: '100%',
+                                    padding: '30px',
+                                }}
+                            >
+                                {data.map((e, idx) => (
+                                    <SwiperSlide key={e.skill} className="swipCard">
+                                        <SkillCardSwiper key={e.skill}>
+                                            <CardImg src={e.img} alt={e.skill} />
+                                            <CardTitle>{e.skill}</CardTitle>
+                                            <CardStar>
+                                                {Array(e.lv)
+                                                    .fill(1)
+                                                    .map((e, idx) => (
+                                                        <FontAwesomeIcon icon="star" color="#f1c40f" key={idx} />
+                                                    ))}
+                                            </CardStar>
+                                            <Cardtxt>{e.txt}</Cardtxt>
+                                        </SkillCardSwiper>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </SkillList>
+                    </Listwrap>
+                </Content>
             </FadeInSection>
         </ContentWrap>
     </Container>
