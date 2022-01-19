@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import NOTION from '../assets/notion_logo.png';
+import reactDom from 'react-dom';
 
 const Footer = styled.footer`
     text-align: center;
@@ -23,23 +24,19 @@ const NotionIcon = styled.img`
     height: 100%;
     border-radius: 20%;
     display: block;
-    opacity: 0.6;
-    transition: opacity 0.2s ease-in-out;
-    &:hover {
-        opacity: 1;
-    }
+    opacity: 1;
 `;
 
 const ItemLink = styled.a`
-    transition: color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     word-break: break-all;
     margin: 25px 15px 15px 15px;
-    height: 30px;
     display: inline-block;
+    height: 30px;
     width: 30px;
     cursor: pointer;
     &:hover {
-        color: #fff;
+        transform: scale(1.15);
     }
 `;
 
@@ -51,6 +48,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
+                    color: '#e55253',
                 }}
                 icon="phone"
                 size="2x"
@@ -62,6 +60,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
+                    color: '#ffca00',
                 }}
                 icon="envelope"
                 size="2x"
@@ -73,6 +72,7 @@ export default () => (
                     display: 'block',
                     width: '100%',
                     height: '100%',
+                    color: '#01b701',
                 }}
                 icon={faGithub}
                 size="2x"
@@ -82,7 +82,7 @@ export default () => (
             <NotionIcon src={NOTION} size="2x" />
         </ItemLink>
         <Copyright>
-            © 2022 Copyright <span style={{ color: '#ddd' }}>YoungJun</span>
+            © 2022. <span style={{ color: '#ddd' }}>YoungJun.</span> All rights reserved
         </Copyright>
     </Footer>
 );

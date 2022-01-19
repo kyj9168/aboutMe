@@ -134,7 +134,7 @@ const NotionIcon = styled.img`
 export default () => (
     <Container id="About">
         <FadeInSection>
-            <Title>About</Title>
+            <Title>ABOUT 🧑🏻‍💻</Title>
         </FadeInSection>
 
         <Content>

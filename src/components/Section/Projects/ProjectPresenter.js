@@ -157,14 +157,14 @@ export default ({ data }) => (
     <Container id="Project">
         <ContentWrap>
             <FadeInSection>
-                <Title>Project</Title>
+                <Title>PROJECT 💻</Title>
             </FadeInSection>
 
             <Content>
                 {data.map((e) => (
                     <Card key={e.id}>
                         <FadeInSection>
-                            <div style={{ boxShadow: '0 15px 30px rgba(0, 0, 0, 0.2)' }}>
+                            <div style={{ boxShadow: '0 15px 30px rgba(0, 0, 0, 0.2)', borderRadius: '10px' }}>
                                 {e.img && (
                                     <Swiper
                                         className="projectSwiper"
