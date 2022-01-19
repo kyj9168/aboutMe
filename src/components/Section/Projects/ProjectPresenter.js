@@ -2,13 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import FadeInSection from '../../Util';
 
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
+
 import './swiper.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);

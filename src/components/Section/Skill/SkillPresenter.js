@@ -1,17 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, EffectCards,Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import FadeInSection from '../../Util';
 
 import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
 import './swiper.css';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, EffectCards,Scrollbar, A11y]);
 
 const Container = styled.article`
     background-color: #38897d;
@@ -213,10 +210,8 @@ export default ({ data }) => (
                         ))}
                         <Swiper
                             className="skillSwipper"
-                            loop={false}
-                            pagination={{ clickable: true }}
                             grabCursor={true}
-                            spaceBetween={20}
+                            effect={'cards'} 
                             style={{
                                 height: '100%',
                                 width: '100%',

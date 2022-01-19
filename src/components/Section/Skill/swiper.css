@@ -8,7 +8,7 @@
     }
 }
 
-.swipCard:nth-child(odd) {
+/* .swipCard:nth-child(odd) {
     animation-duration: 1s;
     animation-name: scaleCard1;
     animation-iteration-count: infinite;
@@ -17,7 +17,7 @@
     animation-duration: 1s;
     animation-name: scaleCard2;
     animation-iteration-count: infinite;
-}
+} */
 
 @keyframes scaleCard1 {
     0% {
