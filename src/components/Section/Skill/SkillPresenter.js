@@ -126,7 +126,7 @@ const SkillCardSwiper = styled.li`
     margin-left: auto;
     margin-right: auto;
     padding: 50px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     // &:hover {
     //     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     //     transform: scale(1.05);
