@@ -50,7 +50,7 @@ const PageUpIcon = styled.img`
 export default () => {
     const { scrollY } = useScroll();
 
-    console.log(scrollY);
+    // console.log(scrollY);
 
     return (
         <Container animate={scrollY}>
