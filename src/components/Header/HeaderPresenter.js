@@ -119,7 +119,7 @@ export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClick
         <HeaderWrap>
             <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>
                 <Logo>
-                    <span style={{ color: '#78a6a4' }}>youngJun's</span>
+                    <span style={{ color: '#78a6a4' }}>YoungJun's</span>
                     <span> Portfolio</span>
                 </Logo>
             </Link>

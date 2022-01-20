@@ -387,7 +387,7 @@ export default ({ data }) => (
                                                     </a>
                                                 </div>
                                             </div>
-                                            yongjun's skill
+                                            youngjun's skill
                                         </div>
                                         <div className="content">
                                             <CardImg src={e.img} alt={e.skill} />
@@ -442,7 +442,7 @@ export default ({ data }) => (
                                                         </a>
                                                     </div>
                                                 </div>
-                                                yongjun's skill
+                                                youngjun's skill
                                             </div>
                                             <div className="content">
                                                 <SkillCardSwiper key={e.skill}>
