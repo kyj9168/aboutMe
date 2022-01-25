@@ -1,0 +1,7 @@
+{
+  "runmode": "local",
+  "local": {
+    "DEBUG_LEVEL": "debug",
+    "EXPRESS_PORT":6102
+  }
+}
