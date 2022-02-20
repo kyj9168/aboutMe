@@ -27,38 +27,44 @@ class SkillContainer extends Component {
                 skill: 'JavaScript',
                 img: JSIMG,
                 lv: 5,
-                txt: '가장 좋아하는 언어입니다. ES6문법 이상을 사용 할 수 있습니다.',
+                txt: 'ES6를 포함한 JavaScript 문법에 능숙하며, ECMAScript의 최신 문법을  꾸준히 살피고 학습합니다.',
             },
             {
                 skill: 'Jquery',
                 img: JQIMG,
                 lv: 5,
-                txt: '자바스크립트로 개발한 코드를 Jquery로 전환하는걸 어려워하지 않습니다',
+                txt: '제이쿼리로 화면 개발이 가능합니다.',
             },
             {
                 skill: 'Node.js',
                 img: NODEIMG,
                 lv: 5,
-                txt: '개발자로 취업후 모든 프로젝트의 백엔드를 node.js로 개발해 왔습니다.',
+                txt: 'express.js 프레임워크를 활용한 api개발이 가능합니다.',
             },
             {
                 skill: 'React.js',
                 img: REACTIMG,
                 lv: 4,
-                txt: '프론트쪽으로 가장 많이 진행한 라이브러리이며 redux에서는 saga 미들웨어를 사용했고 hook 또한 사용 가능합니다.',
+                txt: 'front-end 쪽으로 가장 많이 진행한 라이브러리이며 React hooks를 능숙하게 사용하고 Redux middleware로 thunk, saga, toolkit  모두 경험해 보았습니다.',
             },
 
             {
-                skill: 'KAFKA',
+                skill: 'Kafka',
                 img: KAFKAMG,
                 lv: 2,
                 txt: 'Nifi에 kafka를 연동할 수 있고 서버3대로 클러스터를 구성해본 경험이 있습니다.',
             },
             {
+                skill: 'Redis',
+                img: KAFKAMG,
+                lv: 2,
+                txt: 'express.js 프레임워크에서 서버 구성시 백엔드 세션으로 사용해본 경험이 있습니다.',
+            },
+            {
                 skill: 'NIFI',
                 img: NIFIIMG,
                 lv: 3,
-                txt: 'RDB의 데이터를 ElasticSearch로 수집 하고 데이터를 정재하는 작업이 가능합니다.',
+                txt: 'RDB의 데이터를 ElasticSearch로 수집 하고 데이터를 정제하는 작업이 가능합니다.',
             },
 
             {

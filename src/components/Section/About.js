@@ -145,7 +145,7 @@ export default () => (
                 <ProfileText>
                     <FadeInSection>
                         <ProfileTitle>김영준</ProfileTitle>
-                        <ProfileSubtitle>Full Stack Developer</ProfileSubtitle>
+                        <ProfileSubtitle>Node.js Developer</ProfileSubtitle>
                     </FadeInSection>
 
                     <ProfileDetail>
