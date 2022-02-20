@@ -56,7 +56,7 @@ class SkillContainer extends Component {
             },
             {
                 skill: 'Redis',
-                img: KAFKAMG,
+                img: REDISIMG,
                 lv: 2,
                 txt: 'express.js 프레임워크에서 서버 구성시 백엔드 세션으로 사용해본 경험이 있습니다.',
             },
