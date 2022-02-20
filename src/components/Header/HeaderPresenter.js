@@ -63,7 +63,7 @@ const NavList = styled.ul`
         display: block;
         position: absolute;
         width: 100%;
-        top: ${(props) => (props.current ? '100%' : '-300%')};
+        top: ${(props) => (props.current ? '100%' : '-350%')};
         left: 0;
         transition: top 0.3s ease-in;
         line-height: 3;
@@ -114,7 +114,7 @@ const MobCover = styled.div`
     }
 `;
 
-export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClickList }) => (
+export default ({ pos, home, about, skill, career, project, toggleBtn, CloseBtn, isClickList }) => (
     <Header current={pos > 0}>
         <HeaderWrap>
             <Link onClick={() => CloseBtn(document.getElementById('Home').offsetTop - 60)}>
@@ -136,6 +136,9 @@ export default ({ pos, home, about, skill, project, toggleBtn, CloseBtn, isClick
                 </Item>
                 <Item current={pos >= about.top && pos <= about.bottom}>
                     <Link onClick={() => CloseBtn(document.getElementById('About').offsetTop - 60)}>About</Link>
+                </Item>
+                <Item current={pos >= career.top && pos <= career.bottom}>
+                    <Link onClick={() => CloseBtn(document.getElementById('Career').offsetTop - 60)}>Career</Link>
                 </Item>
                 <Item current={pos >= skill.top && pos <= skill.bottom}>
                     <Link onClick={() => CloseBtn(document.getElementById('Skill').offsetTop - 60)}>Skill</Link>

@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About';
 import Skill from './Skill';
 import Project from './Projects';
+import Career from './Career';
 
 import PAGEUPIMG from '../../assets/page-up.svg';
 import { useScroll } from '../Util/Scroll';
@@ -56,6 +57,7 @@ export default () => {
         <Container animate={scrollY}>
             <Home />
             <About />
+            <Career />
             <Skill />
             <Project />
             <PageUpIcon

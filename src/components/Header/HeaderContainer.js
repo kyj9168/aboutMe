@@ -12,6 +12,10 @@ class HeaderContainer extends Component {
             top: 0,
             bottom: 0,
         },
+        career: {
+            top: 0,
+            bottom: 0,
+        },
         skill: {
             top: 0,
             bottom: 0,
@@ -48,6 +52,7 @@ class HeaderContainer extends Component {
         const Home = document.getElementById('Home');
         const About = document.getElementById('About');
         const Skill = document.getElementById('Skill');
+        const Career = document.getElementById('Career');
         const Project = document.getElementById('Project');
         this.setState({
             home: {
@@ -57,6 +62,10 @@ class HeaderContainer extends Component {
             about: {
                 top: About.offsetTop - 80,
                 bottom: About.offsetTop + About.offsetHeight - 80,
+            },
+            career: {
+                top: Career.offsetTop - 80,
+                bottom: Career.offsetTop + Career.offsetHeight - 80,
             },
             skill: {
                 top: Skill.offsetTop - 80,
@@ -76,12 +85,13 @@ class HeaderContainer extends Component {
     //     window.removeEventListener('scroll', this.checkPos);
     // }
     render() {
-        const { pos, home, about, skill, project, isClickList } = this.state;
+        const { pos, home, about, career, skill, project, isClickList } = this.state;
         return (
             <HeaderPresenter
                 pos={pos}
                 home={home}
                 about={about}
+                career={career}
                 skill={skill}
                 project={project}
                 isClickList={isClickList}

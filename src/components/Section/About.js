@@ -19,6 +19,11 @@ const Title = styled.h2`
     font-size: 3rem;
     font-weight: 600;
     color: #fff;
+
+    @media (min-width: 994px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
     @media (max-width: 994px) {
         text-align: center;
     }
