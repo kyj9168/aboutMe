@@ -74,7 +74,7 @@ export default () => (
                     typewriter
                         .typeString("<span class='Title'>안녕하세요!</span><br>")
                         .typeString("<span class='Title'>능동적인 태도를 가지고<br>항상 발전을 위해 노력하는</span><br>")
-                        .typeString("<span class='Title'> <span class='Title Subcolor'> Web Developer</span> 김영준입니다.</span>")
+                        .typeString("<span class='Title'> <span class='Title Subcolor'> Node.js Developer</span> 김영준입니다.</span>")
                         .start();
                 }}
             />
