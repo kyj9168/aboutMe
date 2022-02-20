@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Container = styled.article`
-    background-color: #63a4a1;
+    background-color: #517776;
     width: 100%;
     padding: 80px 0;
     @media (max-width: 1219px) {
