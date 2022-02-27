@@ -63,7 +63,7 @@ const NavList = styled.ul`
         display: block;
         position: absolute;
         width: 100%;
-        top: ${(props) => (props.current ? '100%' : '-350%')};
+        top: ${(props) => (props.current ? '100%' : '-400%')};
         left: 0;
         transition: top 0.3s ease-in;
         line-height: 3;
