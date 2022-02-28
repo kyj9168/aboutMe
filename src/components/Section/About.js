@@ -211,7 +211,10 @@ export default () => (
                                 </ItemIcon>
                                 <Itemtxt>
                                     <ItemTitle>Notion : </ItemTitle>
-                                    <ItemLink target="_blank" href="https://kyjportfolio.notion.site/kyjportfolio/2382908379ac4bc5b44087e187d6e00e">
+                                    <ItemLink
+                                        target="_blank"
+                                        href="https://kyjportfolio.notion.site/kyjportfolio/2382908379ac4bc5b44087e187d6e00e"
+                                    >
                                         https://www.notion.so/kyjportfolio
                                     </ItemLink>
                                 </Itemtxt>
