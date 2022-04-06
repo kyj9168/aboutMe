@@ -92,31 +92,31 @@ class SkillContainer extends Component {
                 lv: 3,
                 txt: 'Git의 기본 명령어를 학습하고 현재 활용하고 있습니다.',
             },
-            {
-                skill: 'JAVA',
-                img: JAVAIMG,
-                lv: 2,
-                txt: '교육원에서 배웠던 언어로 현재 서브 언어로 공부중에 있습니다.',
-            },
-            {
-                skill: 'JSP',
-                img: JSPIMG,
-                lv: 2,
-                txt: 'spring을 공부할때 가장 많이 사용한 프론트단 언어입니다.',
-            },
-            {
-                skill: 'JPA',
-                img: JPAIMG,
-                lv: 1,
-                txt: 'SpringBoot를 공부할때 CRUD를 JPA로 개발하여 Rest API를 개발해본 경험이 있습니다.',
-            },
+            // {
+            //     skill: 'JAVA',
+            //     img: JAVAIMG,
+            //     lv: 2,
+            //     txt: '교육원에서 배웠던 언어로 현재 서브 언어로 공부중에 있습니다.',
+            // },
+            // {
+            //     skill: 'JSP',
+            //     img: JSPIMG,
+            //     lv: 2,
+            //     txt: 'spring을 공부할때 가장 많이 사용한 프론트단 언어입니다.',
+            // },
+            // {
+            //     skill: 'JPA',
+            //     img: JPAIMG,
+            //     lv: 1,
+            //     txt: 'SpringBoot를 공부할때 CRUD를 JPA로 개발하여 Rest API를 개발해본 경험이 있습니다.',
+            // },
 
-            {
-                skill: 'Spring Boot',
-                img: SPBTIMG,
-                lv: 1,
-                txt: '회사 업무 외로 공부하여 Rest API를 개발하고 게시판을 만들어 본적이 있습니다.',
-            },
+            // {
+            //     skill: 'Spring Boot',
+            //     img: SPBTIMG,
+            //     lv: 1,
+            //     txt: '회사 업무 외로 공부하여 Rest API를 개발하고 게시판을 만들어 본적이 있습니다.',
+            // },
             {
                 skill: 'MY-SQL',
                 img: MYSQLIMG,
