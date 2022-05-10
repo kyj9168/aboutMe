@@ -20,9 +20,9 @@ const globalStyles = createGlobalStyle`
     
     .fade-in-section {
         opacity: 0;
-        transform: translateY(10vh);
+        transform: translateY(5vh);
         visibility: hidden;
-        transition: opacity 1400ms ease-out, transform 700ms ease-out, visibility 1400ms ease-out;
+        transition: 1000ms ease-out;
         will-change: opacity, transform, visibility;
     }
     .fade-in-section.is-visible {

@@ -37,7 +37,7 @@ const Content = styled.div`
     width: fit-content;
     text-align: center;
     background-color: #003f3c;
-
+    max-width: 90%;
     border-radius: 15px;
 
     @media (max-width: 994px) {
@@ -56,6 +56,7 @@ const Content2 = styled.div`
     width: fit-content;
     text-align: center;
     background-color: #003f3c;
+    max-width: 90%;
 
     border-radius: 15px;
 
@@ -157,14 +158,34 @@ export default () => (
         <FadeInSection>
             <Content>
                 <FadeInSection id="imgFadeSection">
+                    <ImgDiv src="/images/fitpet.jpeg" alt="logo" />
+                </FadeInSection>
+
+                <FadeInSection>
+                    <CareerTitle>Fitpet</CareerTitle>
+                </FadeInSection>
+                <FadeInSection>
+                    <CareerSubTitle>2022.05 ~ 재직중</CareerSubTitle>
+                </FadeInSection>
+                <FadeInSection>
+                    <CareerContent>WMS & OMS 백엔드 개발</CareerContent>
+                </FadeInSection>
+            </Content>
+        </FadeInSection>
+        <FadeInSection>
+            <Hr />
+        </FadeInSection>
+        <FadeInSection>
+            <Content>
+                <FadeInSection id="imgFadeSection">
                     <ImgDiv src="/images/logo_type_a.png" alt="logo" />
                 </FadeInSection>
 
                 <FadeInSection>
-                    <CareerTitle>아이브릭스</CareerTitle>
+                    <CareerTitle>I-bricks</CareerTitle>
                 </FadeInSection>
                 <FadeInSection>
-                    <CareerSubTitle>2019.11 ~ 재직중</CareerSubTitle>
+                    <CareerSubTitle>2019.11 ~ 2022.05</CareerSubTitle>
                 </FadeInSection>
                 <FadeInSection>
                     <CareerContent>검색, 추천, 챗봇 개발</CareerContent>
