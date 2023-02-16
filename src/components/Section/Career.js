@@ -192,7 +192,7 @@ export default () => (
           <CareerSubTitle>2022.05 ~ 재직중</CareerSubTitle>
         </FadeInSection>
         <FadeInSection>
-          <CareerContent>WMS & OMS 백엔드 개발</CareerContent>
+          <CareerContent>물류솔루션 백엔드 개발</CareerContent>
         </FadeInSection>
       </Content>
     </FadeInSection>
